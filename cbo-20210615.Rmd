@@ -6,6 +6,7 @@ date: June 15, 2021 #"`r format(Sys.time(), '%d %B %Y')`"
 header-includes: 
   - \usepackage{graphicx}
   - \usepackage{amsmath}
+  - \usepackage{includepdf}
 output:
 #  html_document: default (toggle on for "simplified" view)
   xaringan::moon_reader:
@@ -191,24 +192,148 @@ count: false
 class: inverse, center, middle
 name: insurance
 
-# Health insurance choice
+# Health insurance
 
 <html><div style='float:left'></div><hr color='#EB811B' size=1px width=1055px></html>
 
 ---
 # Decision making
 
-include_url("https://onlinelibrary.wiley.com/doi/abs/10.1002/hec.1539")
-
----
-count: false
-
-# Decision making
-
-include_url("https://imccart.github.io/ACA-Decision-Support/finals/creed/creed-202105.html#1")
+- [Search Costs and Medicare Plan Choice](https://onlinelibrary.wiley.com/doi/abs/10.1002/hec.1539), **Health Economics**, 2010
+- [Decision Assistance and Steering in the ACA Exchanges](https://imccart.github.io/ACA-Decision-Support/), Working Project
 
 
 ---
 # Quality disclosure
 
+- [The Star Treatment: Estimating the Impact of Star Ratings on Medicare Advantage Enrollments](http://jhr.uwpress.org/content/50/4/980.abstract), **Journal of Human Resources**, 2015
+- [Supply-side Responses to Public Quality Ratings: Evidence from Medicare Advantage](https://www.journals.uchicago.edu/doi/abs/10.1162/AJHE_a_00070), **American Journal of Health Economics**, 2017
+- [Quality Disclosure and the Timing of Insurers' Adjustments: Evidence from Medicare Advantage](https://www.sciencedirect.com/science/article/pii/S0167629617310433), **Journal of Health Economics**, 2018
 
+---
+# Competition
+
+.center[
+  ![:scale 75%](images/MAConcentration.png)
+  ]
+---
+count: false
+
+# Competition
+
+[Multimarket contact in health insurance: Evidence from Medicare Advantage](https://www.nber.org/papers/w24486), revise and resubmit at **Journal of Industrial Economics**
+
+--
+.pull-left[
+  ![](images/MMCchange_bid.png)
+]
+
+.pull-right[
+  ![](images/EventBid.png)
+]
+
+---
+class: inverse, center, middle
+name: integration
+
+# Vertical integration
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=1055px></html>
+
+
+---
+# Sources and effects of VI
+
+.center[
+  ![](images/Richardsetal.png)
+]
+
+---
+count: false
+
+# Sources and effects of VI
+
+[Hospital Pricing Following Integration with Physician Practices](https://www.sciencedirect.com/science/article/pii/S0167629621000291), **Journal of Health Economics**, 2021
+
+.center[
+  ![:scale 75%](images/event.png)
+]
+
+
+---
+count: false
+
+# Sources and effects of VI
+
+[Owning the Agent: Hospital Influence on Physician Behaviors](https://www.nber.org/papers/w28859), Working Paper
+
+.pull-left[
+Integration and payments:
+
+  ![](images/IV_Episode_Payments_Spec2.png)
+]
+
+.pull-right[
+Integration and claims:
+
+  ![](images/IV_Episode_Claims_Spec2.png)
+]
+
+
+---
+class: inverse, center, middle
+name: referrals
+
+# Physician referrals 
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=1055px></html>
+
+
+---
+# Physician referrals
+
+.pull-left[
+  ![](images/HighestShareWeighted.png)
+]
+
+.pull-right[
+  ![](images/LLNetworkSize.png)
+]
+
+---
+count: false
+
+# Physician referrals
+
+1. Do PCPs learn about specialist quality and update referral patterns accordingly?
+2. Can we improve this learning process? How?
+
+
+
+---
+class: inverse, center, middle
+name: hospitals
+
+# Hospital pricing
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=1055px></html>
+
+
+---
+# Pricing and pay for performance
+
+.center[
+  ![:scale 70%](images/event_price_2012.png)
+]
+
+
+---
+# Pricing and specialization
+
+.pull-left[
+  ![](images/f6-did-event-ch1-weight.png)
+]
+
+.pull-right[
+  ![](images/f6-did-event-nch1-weight.png)
+]
