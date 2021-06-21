@@ -118,3 +118,4 @@ count: false
 - Are co-pays set directly or determined after bid submission?
 - Where does prescription drug coverage fit here?
 - What about the quality rating system? Generates bonuses and extra percentage for rebates.
+- Do firms "exploit" inertia in premium and co-payment setting?
