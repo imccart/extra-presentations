@@ -1,8 +1,8 @@
 ---
-title: "How Does Insurance Competition Affect Medical Consumption"
-subtitle: "Discussant: Ian McCarthy"
-author: "ASHEcon Annual Meeting"
-date: June 21, 2021 #"`r format(Sys.time(), '%d %B %Y')`"
+title: "Vertical integration among health care providers in Massachusetts"
+subtitle: "Presenter: Vilsa Curto"
+author: "Discussant: Ian McCarthy"
+date: "ASHEcon Annual Meeting, June 23, 2021"
 header-includes: 
   - \usepackage{graphicx}
   - \usepackage{amsmath}
@@ -90,7 +90,8 @@ xaringanExtra::use_scribble(rgb(0.9, 0.5, 0.5))
 ---
 # Where we're headed...
 
-- WHY? 
+**WHY?**
+
 - Dranove and Ody show site-based payment differentials are one reason
 - Maybe the 340B drug discount program? Alpert, Hsi, and Jacobson don't find much here
 - Attempt to excel under new payment models (ACOs, bundled payments, HRRP, VBP)?

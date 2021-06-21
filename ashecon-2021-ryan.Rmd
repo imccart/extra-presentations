@@ -1,8 +1,8 @@
 ---
 title: "How Does Insurance Competition Affect Medical Consumption"
-subtitle: "Discussant: Ian McCarthy"
-author: "ASHEcon Annual Meeting"
-date: June 21, 2021 #"`r format(Sys.time(), '%d %B %Y')`"
+subtitle: "Presenter: Conor Ryan"
+author: "Discussant: Ian McCarthy"
+date: "ASHEcon Annual Meeting, June 21, 2021"
 header-includes: 
   - \usepackage{graphicx}
   - \usepackage{amsmath}
