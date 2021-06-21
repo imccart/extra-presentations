@@ -91,7 +91,7 @@ count: false
 # Medicare Advantage Plan Types
 
 .center[
-  ![](images/mma-kff-plantypes.png)
+  ![](images/mma-kff-plantype.png)
 ]
 
 
