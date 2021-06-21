@@ -1,0 +1,98 @@
+---
+title: "How Does Insurance Competition Affect Medical Consumption"
+subtitle: "Discussant: Ian McCarthy"
+author: "ASHEcon Annual Meeting"
+date: June 21, 2021 #"`r format(Sys.time(), '%d %B %Y')`"
+header-includes: 
+  - \usepackage{graphicx}
+  - \usepackage{amsmath}
+  - \usepackage{includepdf}
+output:
+#  html_document: default (toggle on for "simplified" view)
+  xaringan::moon_reader:
+    css: [default, metropolis, metropolis-fonts, custom.css] 
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      beforeInit: ["macros.js","https://platform.twitter.com/widgets.js"]
+#knit: pagedown::chrome_print
+---
+
+<!-- Adjust some CSS code for font size, maintain R code font size -->
+<style type="text/css">
+.remark-slide-content {
+    font-size: 30px;
+    padding: 1em 2em 1em 2em;    
+}
+.remark-code, .remark-inline-code { 
+    font-size: 20px;
+}
+</style>
+
+
+<!-- Set R options for how code chunks are displayed and load packages -->
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+options(dplyr.summarise.inform = FALSE)
+library(knitr)
+opts_chunk$set(
+  fig.align="center",  
+  fig.height=3, #fig.width=6,
+  # out.width="748px", #out.length="520.75px",
+  dpi=300, #fig.path='Figs/',
+  cache=T#, echo=F, warning=F, message=F
+  )
+
+knitr::opts_hooks$set(fig.callout = function(options) {
+  if(options$fig.callout) {
+    options$echo = FALSE
+  }
+  options
+})
+
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse, ggplot2, dplyr, lubridate, readr, readxl, hrbrthemes,scales, gganimate, gapminder, gifski, png, tufte, plotly, OECD, ggrepel, xaringanExtra, webshot)
+```
+
+
+```{r xaringan-scribble, echo=FALSE}
+xaringanExtra::use_scribble(rgb(0.9, 0.5, 0.5))
+```
+
+# Vertical Integration
+
+.center[
+  ![](images/Richardsetal.png)
+]
+
+---
+# Why do we care?
+
+- Very important area of health care research
+- Lots of interest in this topic among policy-makers
+- Large price effects, little (or no) quality improvement
+
+---
+# Where we've been...
+
+- Cuellar, Gertler, Ciliberto, Dranove, Baker, Bundorf, Kessler...ahead of their time in studying price effects of integration
+- Some limitations in data, but early results showed increase in prices among integrated hospitals/physicians
+
+---
+# More recently...
+
+- Koch, Capps, Carlin, Dowd, Feldman, Dranove, Ody, Walden, Whaley, and this paper!...recent studies with very good data
+- Vertical integration increases physician prices, increases hospital prices, increases referrals to integrated providers, decreases referrals to non-integrated providers, doesn't do much for quality
+
+---
+# Where we're headed...
+
+- WHY? 
+- Dranove and Ody show site-based payment differentials are one reason
+- Maybe the 340B drug discount program? Alpert, Hsi, and Jacobson don't find much here
+- Attempt to excel under new payment models (ACOs, bundled payments, HRRP, VBP)?
+- Standard bargaining motives?
+- Foreclosure of rivals?
