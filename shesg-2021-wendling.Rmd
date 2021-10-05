@@ -62,18 +62,17 @@ pacman::p_load(tidyverse, ggplot2, dplyr, lubridate, readr, readxl, hrbrthemes,s
 xaringanExtra::use_scribble(rgb(0.9, 0.5, 0.5))
 ```
 
-# Changing physician landscape
 
-```{r}
+```{r include=FALSE}
 phy.status <- tribble(
-  ~"Status", ~"2012", ~"2014", ~"2016", ~"2018",
+  ~"Status", ~"Yr2012", ~"Yr2014", ~"Yr2016", ~"Yr2018",
   "Owner", 53.2, 50.8, 47.1, 45.9,
   "Employee", 41.8, 43.0, 47.1, 47.4,
   "Independent", 5.0, 6.2, 5.9, 6.7
 )
 
 phy.practice <- tribble(
-  ~"Type", ~"2012", ~"2014", ~"2016", ~"2018",
+  ~"Type", ~"Yr2012", ~"Yr2014", ~"Yr2016", ~"Yr2018",
   "Solo", 18.4, 17.1, 16.5, 14.8,
   "Single Specialty", 45.5, 42.2, 42.8, 42.8,
   "Multi Specialty", 22.1, 24.7, 24.6, 25.2,
@@ -83,11 +82,76 @@ phy.practice <- tribble(
 )
 
 phy.size <- tribble(
-  ~"Size", ~"2012", ~"2014", ~"2016", ~"2018",
+  ~"Size", ~"Yr2012", ~"Yr2014", ~"Yr2016", ~"Yr2018",
   "Less than 5", 40.0, 40.9, 37.9, 35.7,
   "5 to 10", 21.4, 19.8, 19.9, 20.8,
   "11 to 24", 13.4, 12.1, 13.3, 12.7,
   "25 to 49", 7.1, 6.3, 7.4, 7.6,
-  "50 or more", 12.2, 13.5, 13.8, 14.7,
+  "50 or more", 12.2, 13.5, 13.8, 14.7
 )
 ```
+
+# Changing physician landscape
+.center[
+```{r echo=FALSE}
+phy.status <- pivot_longer(phy.status,
+                           cols = starts_with("Yr"),
+                           names_to = "Year",
+                           names_prefix = "Yr",
+                           values_to="Percent")
+ggplot(phy.status, aes(x=Year, y=Percent, fill=Status, label=paste0(sprintf("%1.1f", Percent),"%"))) +
+  geom_bar(stat="identity") +
+  geom_text(position=position_stack(vjust=0.5), color="white", size=3) +
+  scale_fill_grey() +
+  theme_bw()
+```
+]
+
+Data from AMA Physician Practice Benchmark Survey, 2012-2018
+
+---
+count: false
+# Changing physician landscape
+
+.center[
+```{r echo=FALSE}
+phy.practice <- pivot_longer(phy.practice,
+                           cols = starts_with("Yr"),
+                           names_to = "Year",
+                           names_prefix = "Yr",
+                           values_to="Percent") %>%
+  arrange(Percent)
+ggplot(phy.practice, aes(x=Year, y=Percent, fill=factor(Type, levels=c("Other","Faculty","Hospital","Multi Specialty", "Single Specialty", "Solo")), label=paste0(sprintf("%1.1f", Percent),"%"))) +
+  geom_bar(stat="identity") +
+  labs(fill="Practice Type") +
+  geom_text(position=position_stack(vjust=0.5), color="white", size=3) +
+  scale_fill_grey() +
+  theme_bw()
+```
+]
+
+Data from AMA Physician Practice Benchmark Survey, 2012-2018
+
+
+---
+count: false
+# Changing physician landscape
+
+.center[
+```{r echo=FALSE}
+phy.size <- pivot_longer(phy.size,
+                           cols = starts_with("Yr"),
+                           names_to = "Year",
+                           names_prefix = "Yr",
+                           values_to="Percent") %>%
+  arrange(Percent)
+ggplot(phy.size, aes(x=Year, y=Percent, fill=factor(Size, levels=c("50 or more","25 to 49","11 to 24","5 to 10","Less than 5")), label=paste0(sprintf("%1.1f", Percent),"%"))) +
+  geom_bar(stat="identity") +
+  labs(fill="Practice Size") +
+  geom_text(position=position_stack(vjust=0.5), color="white", size=3) +
+  scale_fill_grey() +
+  theme_bw()
+```
+]
+
+Data from AMA Physician Practice Benchmark Survey, 2012-2018
