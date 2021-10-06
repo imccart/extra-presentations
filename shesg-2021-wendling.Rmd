@@ -293,3 +293,9 @@ name: questions
 
 ---
 # GIF expressing remorse for bringing this up
+
+---
+# Final ideas
+
+- Thinking about movement across practices...
+- Could exploit variation in non-compete agreement enforcement (Hausman and Lavetti, 2019)

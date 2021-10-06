@@ -47,6 +47,15 @@ class: center, middle, inverse, title-slide
 
 
 
+---
+class: inverse, center, middle
+name: background
+
+# Important question!
+
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=1055px&gt;&lt;/html&gt;
+
+---
 # Changing physician landscape
 .center[
 &lt;img src="shesg-2021-wendling_files/figure-html/unnamed-chunk-2-1.png" style="display: block; margin: auto;" /&gt;
@@ -90,7 +99,16 @@ Physicians are now:
 **Relatively little research on practice structure**
 
 ---
-# This paper in pictures
+class: inverse, center, middle
+name: review
+
+# What does this paper do?
+
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=1055px&gt;&lt;/html&gt;
+
+
+---
+# In pictures
 
 .pull-left[
 **Practice at time** `\(t\)`
@@ -123,6 +141,75 @@ at least half of physicians leave practice ("merger-to")
 .pull-right[
 at least 10% new physicians ("merger-from")
 ]
+
+---
+# Estimation and Identification
+
+- Outcomes: Mortality and progression of disease
+- Identification: Conditional independence assumption
+- Estimation: OLS with indicators for different merger types and controls for patient characteristics
+
+
+---
+class: inverse, center, middle
+name: questions
+
+# Some thoughts and questions
+
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=1055px&gt;&lt;/html&gt;
+
+---
+# Capturing mergers in the data
+
+- What happens if 50% of physicians leave a practice, and the practice subsequently (or concurrently) gains more than 10% of new physicians?
+-
+
+---
+# Are these mergers?
+
+.pull-left[
+**Sure**
+- Bulk of a practice dissolves (50%)
+- Existing practice expands by some meaningful amount (10%)
+]
+
+.pull-right[
+**Not really**
+- "merger-to" practices still exist
+- very hard to distinguish horizontal vs vertical
+]
+
+---
+# If not mergers, what?
+
+- Disruption in care
+- Information transmission within practices
+- Variations in practice styles due to peers
+
+
+---
+# Identification
+
+- Physicians may change practices due to their current patient profile or restrictions on how they can practice
+- Sample selection? How often does a person leave their physician after the physician changes practices?
+- Block estimation predicts treatment using patient characteristics, but nothing about physician practices. What source of endogeneity is this intended to adjust for?
+- In general, no physician characteristics used in the analysis?
+
+---
+# Estimation
+
+- What is the estimand of interest?
+- Not an ATT without strong homogeneity assumptions (across people and over time)
+- Staggered treatment, etc.
+
+---
+# GIF expressing remorse for bringing this up
+
+---
+# Final ideas
+
+- Thinking about movement across practices...
+- Could exploit variation in non-compete agreement enforcement (Hausman and Lavetti, 2019)
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
