@@ -7,6 +7,14 @@ header-includes:
   - \usepackage{graphicx}
   - \usepackage{amsmath}
   - \usepackage{includepdf}
+  - \usepackage{pgf}
+  - \usepackage{tikz}
+  - \usepackage{pgfplots}
+  - \usepackage{pdftools}
+  - \pgfplotsset{compat=1.15}
+  - \usepackage{mathrsfs}
+  - \usetikzlibrary{arrows}
+  - \usetikzlibrary{patterns}  
 output:
 #  html_document: default (toggle on for "simplified" view)
   xaringan::moon_reader:
@@ -91,6 +99,15 @@ phy.size <- tribble(
 )
 ```
 
+---
+class: inverse, center, middle
+name: background
+
+# Important question!
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=1055px></html>
+
+---
 # Changing physician landscape
 .center[
 ```{r echo=FALSE}
@@ -155,3 +172,124 @@ ggplot(phy.size, aes(x=Year, y=Percent, fill=factor(Size, levels=c("50 or more",
 ]
 
 Data from AMA Physician Practice Benchmark Survey, 2012-2018
+
+---
+count: false
+
+# Changing Physician Landscape
+
+Physicians are now:
+- less likely to own their own practice
+- more likely to be employed by a hospital or part of practice owned by hospital
+- more likely to be part of a very large practice
+
+--
+
+**Relatively little research on practice structure**
+
+---
+class: inverse, center, middle
+name: review
+
+# What does this paper do?
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=1055px></html>
+
+
+---
+# In pictures
+
+.pull-left[
+**Practice at time** $t$
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+]
+
+.pull-right[
+**Practice at time** $t+1$
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+]
+
+--
+
+.pull-left[
+at least half of physicians leave practice ("merger-to")
+]
+
+.pull-right[
+at least 10% new physicians ("merger-from")
+]
+
+---
+# Estimation and Identification
+
+- Outcomes: Mortality and progression of disease
+- Identification: Conditional independence assumption
+- Estimation: OLS with indicators for different merger types and controls for patient characteristics
+
+
+---
+class: inverse, center, middle
+name: questions
+
+# Some thoughts and questions
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=1055px></html>
+
+---
+# Capturing mergers in the data
+
+- What happens if 50% of physicians leave a practice, and the practice subsequently (or concurrently) gains more than 10% of new physicians?
+-
+
+---
+# Are these mergers?
+
+.pull-left[
+**Sure**
+- Bulk of a practice dissolves (50%)
+- Existing practice expands by some meaningful amount (10%)
+]
+
+.pull-right[
+**Not really**
+- "merger-to" practices still exist
+- very hard to distinguish horizontal vs vertical
+]
+
+---
+# If not mergers, what?
+
+- Disruption in care
+- Information transmission within practices
+- Variations in practice styles due to peers
+
+
+---
+# Identification
+
+- Physicians may change practices due to their current patient profile or restrictions on how they can practice
+- Sample selection? How often does a person leave their physician after the physician changes practices?
+- Block estimation predicts treatment using patient characteristics, but nothing about physician practices. What source of endogeneity is this intended to adjust for?
+- In general, no physician characteristics used in the analysis?
+
+---
+# Estimation
+
+- What is the estimand of interest?
+- Not an ATT without strong homogeneity assumptions (across people and over time)
+- Staggered treatment, etc.
+
+---
+# GIF expressing remorse for bringing this up
