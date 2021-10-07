@@ -12,4 +12,4 @@ This repo just collects a few additional presentations outside of any specific r
 - [ASHEcon, June 2021, Ryan 2021](ashecon-2021-ryan.html) Slides for discussion of *How does insurance competition affect medical consumption?* presented by Conor Ryan
 - [ASHEcon, June 2021, Basu 2021](ashecon-2021-basu.html) Slides for discussion of *Financial burdens of out-of-pocket spending among Medicare fee-for-service beneficiaries: Role of the 'big four' chronic health conditions* presented by Rashmita Basu
 - [ASHEcon, June 2021, Curto 2021](ashecon-2021-curto.html) Slides for discussion of *Vertical integration among health care providers in Massachusetts* presented by Vilsa Curto
-
+- [SHESG, October 2021, Wendling 2021](shesg-2021-wendling.html) Slides for discussion of *The Effect of Physician Group Mergers on the Health Outcomes of Medicare Beneficiaries* presented by Brett Wendling

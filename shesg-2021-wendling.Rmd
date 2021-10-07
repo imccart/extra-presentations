@@ -99,15 +99,8 @@ phy.size <- tribble(
 )
 ```
 
----
-class: inverse, center, middle
-name: background
 
-# Important question!
 
-<html><div style='float:left'></div><hr color='#EB811B' size=1px width=1055px></html>
-
----
 # Changing physician landscape
 .center[
 ```{r echo=FALSE}
@@ -232,10 +225,10 @@ at least 10% new physicians ("merger-from")
 ]
 
 ---
-# Estimation and Identification
+# Identification and Estimation
 
 - Outcomes: Mortality and progression of disease
-- Identification: Conditional independence assumption
+- Identification: DD(ish)
 - Estimation: OLS with indicators for different merger types and controls for patient characteristics
 
 
@@ -251,7 +244,7 @@ name: questions
 # Capturing mergers in the data
 
 - What happens if 50% of physicians leave a practice, and the practice subsequently (or concurrently) gains more than 10% of new physicians?
--
+- What happens if physicians move practices more than once?
 
 ---
 # Are these mergers?
@@ -279,10 +272,11 @@ name: questions
 ---
 # Identification
 
-- Physicians may change practices due to their current patient profile or restrictions on how they can practice
+- Is this a DD? Didn't see an "ever treated" dummy or person fixed effect...
 - Sample selection? How often does a person leave their physician after the physician changes practices?
 - Block estimation predicts treatment using patient characteristics, but nothing about physician practices. What source of endogeneity is this intended to adjust for?
-- In general, no physician characteristics used in the analysis?
+- Physicians may change practices due to their current patient profile or restrictions on how they can practice
+- Are physician characteristics in the data?
 
 ---
 # Estimation
@@ -292,7 +286,12 @@ name: questions
 - Staggered treatment, etc.
 
 ---
-# GIF expressing remorse for bringing this up
+class: clear
+
+.center[
+  ![:scale 55%](https://media.giphy.com/media/1yMcjnQoYejDQ8AwZN/giphy.gif)
+]
+
 
 ---
 # Final ideas
