@@ -82,7 +82,7 @@ Some thoughts on U.S. health care...
 
 3. [Prices are Really High!](#high)
 
-4. [Economics can help][#economics]
+4. [Economics can help](#economics)
 
 
 <!-- New Section -->
@@ -338,21 +338,21 @@ class: clear, middle
 # 3. Really high prices
 
 .center[
-![:scale 70%](images/price-comparison.png)
+![:scale 60%](images/price-comparison.png)
 ]
 
 ---
 # 3. Really high prices
 
 .center[
-![:scale 70%](images/price-compare2.png)
+![:scale 60%](images/price-compare2.png)
 ]
 
 ---
 # 3. Really high prices
 
 .center[
-![:scale 70%](images/price-compare3.png)
+![:scale 60%](images/price-compare3.png)
 ]
 
 ---
@@ -395,10 +395,10 @@ Price $\neq$ charge $\neq$ cost $\neq$ patient out-of-pocket spending
 
 
 ---
-# What is a hospital price?
+# Why does it matter?
 
 .center[
-  ![:scale 70%](images/DifferentPrices.jpg)
+  ![:scale 65%](images/DifferentPrices.jpg)
 ]
 
 <div class="smalltext">Source: <a href="https://healthcarepricingproject.org/">Health Care Pricing Project</a></div>
@@ -483,11 +483,11 @@ Almost any way you define it, hospital markets are more and more concentrated (l
 # Hospital concentration over time
 
 .pull-left[
-  ![:scale 100%](images/GHT1.png)
+  ![:scale 110%](images/GHT1.png)
 ]
 
 .pull-right[
-  ![:scale 100%](images/GHT2.png)
+  ![:scale 110%](images/GHT2.png)
 ]
 
 <div class="smalltext">Source: <a href="https://www.aeaweb.org/articles?id=10.1257/jel.53.2.235">Gaynor, Ho, and Town (2015). The Industrial Organization of Health Care Markets. Journal of Economic Literature.</a></div>
@@ -596,4 +596,6 @@ Essentially two types of mergers:
 # Where do we go frome here?
 
 1. Adopt sensible policies
+
 2. Antitrust enforcement
+
