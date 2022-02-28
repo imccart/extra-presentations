@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Sticker Shock!</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ian McCarthy | Emory University" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <script src="libs/fabric/fabric.min.js"></script>
+    <link href="libs/xaringanExtra-scribble/scribble.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-scribble/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#E68080"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Sticker Shock!
+## Economics and Hospital Pricing
+### Ian McCarthy | Emory University
+### Thursday, March 3, 2022
+
+---
+
+
+&lt;!-- Adjust some CSS code for font size, maintain R code font size --&gt;
+&lt;style type="text/css"&gt;
+.remark-slide-content {
+    font-size: 30px;
+    padding: 1em 2em 1em 2em;    
+}
+.remark-code, .remark-inline-code { 
+    font-size: 20px;
+}
+&lt;/style&gt;
+
+
+&lt;!-- Set R options for how code chunks are displayed and load packages --&gt;
+
+
+
+
+
+# Health care in the U.S.
+
+.center[
+&lt;iframe width="800" height="500" src="https://www.youtube.com/embed/u2AFI_M-QGg?start=135&amp;end=197" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+]
+
+---
+class: inverse
+
+# Outline
+
+Some thoughts on U.S. health care...
+
+1. [Quality is OK](#health)
+
+2. [The System is Confusing](#complex)
+
+3. [Prices are Really High!](#high)
+
+4. [Economics can help][#economics]
+
+
+&lt;!-- New Section --&gt;
+---
+class: inverse, center, middle
+name: health
+
+# Health Care in the U.S.
+
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=1055px&gt;&lt;/html&gt;
+
+---
+# Health improvements worldwide
+
+We've made *major* improvements in life expectancy (and many other measures of health) across the world
+
+- Poverty reduction
+- Technology development and innovation
+- Technology diffusion and adoption
+- Access to better services, including health care
+
+
+---
+# Health improvements worldwide
+
+
+
+
+&lt;img src="oxford-hospital-pricing_files/figure-html/life-exp-full-output-1.png" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+# Health improvements related to economic growth
+
+
+
+
+&lt;img src="oxford-hospital-pricing_files/figure-html/lifexp-full-output-1.png" style="display: block; margin: auto;" /&gt;
+
+
+---
+# Health improvements related to economic growth
+
+
+
+.center[
+  ![](images/anim1.gif)
+]
+
+---
+# But the U.S. is unique
+
+
+
+.center[
+  ![](images/anim2.gif)
+]
+
+
+---
+# The U.S. has very high spending
+
+
+
+&lt;img src="oxford-hospital-pricing_files/figure-html/spend-1.png" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+# And our spending doesn't pay off in some areas
+
+
+
+.center[
+  ![](images/anim4.gif)
+]
+
+
+
+---
+# And our spending doesn't pay off in some areas
+
+
+
+.center[
+  ![](images/anim5.gif)
+]
+
+
+&lt;!-- New Section --&gt;
+---
+class: inverse, center, middle
+name: complex
+
+# U.S. Health Care is Confusing!
+
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=1055px&gt;&lt;/html&gt;
+
+
+---
+class: clear, middle
+
+&gt; *"Nobody knew health care could be so complicated"*
+&gt; &lt;footer&gt;-- Donald Trump&lt;/footer&gt;
+
+
+---
+# Fragmentation
+
+A common criticism of U.S. health care is that it is extremely fragmented:
+- different ways to get insurance
+- mix of providers, organizational structures, and reliance on referrals
+- separate billing (for the most part)
+
+---
+# Complicated bills
+Our fragmented system has led to a ridiculously complex and convoluted billing process
+
+--
+
+.center[
+  ![](images/BillExample.jpg)
+]
+
+&lt;div class="smalltext"&gt;Brill, Steven. 2013. "Bitter Pill: Why Medical Bills are Killing Us." *Time Magazine*.&lt;/div&gt;
+
+
+---
+class: clear, middle
+
+**What does all this complexity mean?**
+
+---
+# 1. Too many uninsured
+
+.center[
+  ![:scale 75%](images/kff-uninsured.png)
+]
+
+
+---
+# 2. Variation in health care delivery and spending
+
+.pull-left[
+  ![](images/dartmouth_map.png)
+]
+
+.pull-right[
+  ![:scale 80%](images/dartmouth_dist.png)
+]
+
+---
+# 3. Really high prices
+
+.center[
+![:scale 70%](images/price-comparison.png)
+]
+
+---
+# 3. Really high prices
+
+.center[
+![:scale 70%](images/price-compare2.png)
+]
+
+---
+# 3. Really high prices
+
+.center[
+![:scale 70%](images/price-compare3.png)
+]
+
+---
+# 3. Really high prices
+
+.center[
+![:scale 70%](images/price-compare4.png)
+]
+
+---
+# 3. Really high prices
+
+.center[
+![:scale 70%](images/price-compare6.png)
+]
+
+&lt;!-- New Section --&gt;
+---
+class: inverse, center, middle
+name: high
+
+# Why are prices so high?
+
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=1055px&gt;&lt;/html&gt;
+
+---
+# How are prices generated?
+
+- Negotiation with private insurers (bargaining problem)
+- Set payment from Medicare and Medicaid
+  - Medicaid managed care (80%)
+  - Medicare Advantage (45%)
+- Uninsured patients (charge amounts)
+
+--
+
+.center[
+Price `\(\neq\)` charge `\(\neq\)` cost `\(\neq\)` patient out-of-pocket spending
+]
+
+
+---
+# What is a hospital price?
+
+.center[
+  ![:scale 70%](images/DifferentPrices.jpg)
+]
+
+&lt;div class="smalltext"&gt;Source: &lt;a href="https://healthcarepricingproject.org/"&gt;Health Care Pricing Project&lt;/a&gt;&lt;/div&gt;
+
+
+---
+# What is a hospital price?
+
+Not clear what exactly is negotiated...
+
+--
+.pull-left[
+### Fee-for-service
+- price per procedure
+- percentage of charges
+- markup over Medicare rates
+]
+
+--
+.pull-right[
+### Capitation
+- payment per patient
+- pay-for-performance
+- shared savings
+]
+
+
+---
+# Hospital prices in real life
+
+.pull-left[
+  ![](images/HC_var_withinmkt_hip_ga_atlanta.png)
+]
+
+.pull-right[
+  ![](images/HC_var_withinmkt_kmri_ga_atlanta.png)
+]
+
+&lt;div class="smalltext"&gt;Source: &lt;a href="https://healthcarepricingproject.org/"&gt;Health Care Pricing Project&lt;/a&gt;&lt;/div&gt;
+
+
+&lt;!-- New Section --&gt;
+---
+class: inverse, center, middle
+name: economics
+
+# Where does economics fit in here?
+
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=1055px&gt;&lt;/html&gt;
+
+
+---
+# Health care and economics (in general)
+
+Lots of interesting economic issues in health care (not all unique to the U.S.):
+
+--
+
+1. Extremely heterogeneous products
+2. Asymmetric information between patients and physicians
+3. Unobservable quality (experience good)
+4. Unpredictable need (inability to shop in many cases)
+5. Distortion of incentives due to insurance
+6. Adverse selection (asymmetric information between patients and insurers)
+
+---
+# How is the U.S. unique?
+
+- These factors exist in other markets and in other countries, but...
+- Health care is unique in the combination of these issues
+- U.S. is unique in the extent of these issues in health care (policy problems)
+- We have a market based system but without sufficient competition...
+
+---
+# Trends in competitiveness
+Almost any way you define it, hospital markets are more and more concentrated (less competitive) in recent decades.
+- 1990: 65% of MSAs highlgy concentrated, 23% unconcentrated
+- 2006: 77% highly concentrated, 11% unconcentrated
+
+
+---
+# Hospital concentration over time
+
+.pull-left[
+  ![:scale 100%](images/GHT1.png)
+]
+
+.pull-right[
+  ![:scale 100%](images/GHT2.png)
+]
+
+&lt;div class="smalltext"&gt;Source: &lt;a href="https://www.aeaweb.org/articles?id=10.1257/jel.53.2.235"&gt;Gaynor, Ho, and Town (2015). The Industrial Organization of Health Care Markets. Journal of Economic Literature.&lt;/a&gt;&lt;/div&gt;
+
+---
+# Hospital concentration over time
+- More data and [interactive report](https://healthcostinstitute.org/hcci-originals/healthy-marketplace-index/hmi) from the Health Care Cost Institute.
+- [Presentation](https://nihcm.org/publications/hospital-consolidation-trends-impacts-outlook) from the National Institute for Health Care Management
+
+---
+# Why?
+Historical perception of hospital competition as "wasteful" and assumption that more capacity means more (unnecessary) care:
+- Limit public spending by limiting competition
+- Prevalence of certificate of need (CON) laws
+
+---
+# Effects of reduced competition
+1. Higher prices
+2. Lower quality, [2020 NEJM Paper](https://www.nejm.org/doi/full/10.1056/NEJMsa1901383)
+3. Maybe lower costs (but not passed on to lower prices)&lt;br&gt;
+
+--
+
+Effects for both "in-market" and "out-of-market" mergers
+
+---
+# Types of hospitals involved in mergers
+.center[
+  ![](images/nihcm-hospital-types.jpg)
+]
+
+---
+# Types of hospitals involved in mergers
+
+- Ascension-Presence: Largest non-profit system in US adds 10 hospitals to existing 9 hospitals in Chicago
+- Fairview-HealthEast: 11 hospital system becomes largest in Twin Cities area
+- Hospital corporation of america (HCA) adds 4 hospitals to the 10 existing HCA hospitals in Houston
+- Northwestern-Centegra: Forms 10 hospital system in Chicago
+- Emory-DeKalb: Forms 10 hospital system in Atlanta
+- Jefferson-Einstein: Forms 18 hospital system in Philadelphia area
+
+
+.footnote[Source: NIHCM Hospital Consolidation Trends]
+
+
+---
+# Different merger types
+Essentially two types of mergers:
+
+1. "Within-market"
+2. "Out-of-market"
+
+
+---
+# Within-market mergers
+
+- Most well-understood merger type
+- Established tools for examination in anti-trust
+- Defining the market is still a contentious issue
+
+---
+# Within-market mergers
+
+- Listed previously (Emory-DeKalb, etc.)
+- **Big** price effects
+  - 20 to 40% in many studies
+  - Up to 60% in some studies
+  - Bigger increases the closer are the hospitals
+  - Price increases spillover to other hospitals too
+- Account for about 50% of all mergers since 2000
+
+
+---
+# Out-of-market mergers
+
+- Less understood
+- No formal structure for analyzing in court
+- These types of mergers are essentially permitted without risk of DOJ/FTC challenge
+
+---
+# Out-of-market mergers
+
+- Involve larger systems spanning different isolated markets
+  - Advocate-Aurora: 27 hospital system in IL and WI
+  - Baptist Memorial-Mississippi Baptist: 22 hospitals in TN, AR, and MS
+  - UPMC-Pinnacle: 24 hospital system recently added 8 in central PA
+  - Catholic Health Initiatives-Dignity Health: 142 hospitals in 21 states
+  - HCA: 177 hospitals in 21 states
+  - RCCH HealthCare Partners: 89 hospitals in 30 states, focusing on non-urban areas
+- About 35% of all mergers are out-of-market but in same state, 15% out-of-state
+- Smaller but meaningful price increases, 5 to 10%
+
+---
+# 1. Out of market mergers and common customers
+.center[
+  ![](images/nihcm-common-customer.png)
+]
+
+---
+# 2. Out of market mergers and multimarket contact
+.center[
+  ![](images/nihcm-mmc.png)
+]
+
+---
+# Where do we go frome here?
+
+1. Adopt sensible policies
+2. Antitrust enforcement
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
