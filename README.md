@@ -5,6 +5,8 @@ This repo just collects a few additional presentations outside of any specific r
 ## Background Presentations
 
 - [CBO, June 2021](cbo-20210615.html) This is a presentation I did for the CBO just to introduce myself to various teams during my visiting scholar position in 2021.
+- [Oxford College, March 2022](oxford-hospital-pricing.html) This is a presentation I did for Oxford College as part of their Lyceum Lecture Series. We discussed health care in the U.S., focusing on high hospital prices and lack of competition.
+
 
 
 ## Conference Discussant Slides
