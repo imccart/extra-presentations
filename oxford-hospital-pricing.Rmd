@@ -72,11 +72,9 @@ xaringanExtra::use_scribble(rgb(0.9, 0.5, 0.5))
 ---
 class: inverse
 
-# Outline
+# Some thought on U.S. health care...
 
-Some thoughts on U.S. health care...
-
-1. [Quality is OK](#health)
+1. [Quality is "Meh"](#health)
 
 2. [The System is Confusing](#complex)
 
@@ -90,7 +88,7 @@ Some thoughts on U.S. health care...
 class: inverse, center, middle
 name: health
 
-# Health Care in the U.S.
+# Spending and Quality
 
 <html><div style='float:left'></div><hr color='#EB811B' size=1px width=1055px></html>
 
@@ -297,18 +295,6 @@ A common criticism of U.S. health care is that it is extremely fragmented:
 - mix of providers, organizational structures, and reliance on referrals
 - separate billing (for the most part)
 
----
-# Complicated bills
-Our fragmented system has led to a ridiculously complex and convoluted billing process
-
---
-
-.center[
-  ![](images/BillExample.jpg)
-]
-
-<div class="smalltext">Brill, Steven. 2013. "Bitter Pill: Why Medical Bills are Killing Us." *Time Magazine*.</div>
-
 
 ---
 class: clear, middle
@@ -368,6 +354,22 @@ class: clear, middle
 .center[
 ![:scale 70%](images/price-compare6.png)
 ]
+
+---
+# 4. Confusing pricing
+
+Our fragmented system has led to a ridiculously complex and convoluted billing process
+
+--
+
+.center[
+  ![](images/BillExample.jpg)
+]
+
+<div class="smalltext">Brill, Steven. 2013. "Bitter Pill: Why Medical Bills are Killing Us." *Time Magazine*.</div>
+
+
+
 
 <!-- New Section -->
 ---
@@ -467,7 +469,11 @@ Lots of interesting economic issues in health care (not all unique to the U.S.):
 ---
 # How is the U.S. unique?
 
-- These factors exist in other markets and in other countries, but...
+These factors exist in other markets and in other countries, but...
+
+
+--
+
 - Health care is unique in the combination of these issues
 - U.S. is unique in the extent of these issues in health care (policy problems)
 - We have a market based system but without sufficient competition...
@@ -475,7 +481,7 @@ Lots of interesting economic issues in health care (not all unique to the U.S.):
 ---
 # Trends in competitiveness
 Almost any way you define it, hospital markets are more and more concentrated (less competitive) in recent decades.
-- 1990: 65% of MSAs highlgy concentrated, 23% unconcentrated
+- 1990: 65% of MSAs highly concentrated, 23% unconcentrated
 - 2006: 77% highly concentrated, 11% unconcentrated
 
 
@@ -494,30 +500,19 @@ Almost any way you define it, hospital markets are more and more concentrated (l
 
 ---
 # Hospital concentration over time
+
 - More data and [interactive report](https://healthcostinstitute.org/hcci-originals/healthy-marketplace-index/hmi) from the Health Care Cost Institute.
+
 - [Presentation](https://nihcm.org/publications/hospital-consolidation-trends-impacts-outlook) from the National Institute for Health Care Management
 
----
-# Why?
-Historical perception of hospital competition as "wasteful" and assumption that more capacity means more (unnecessary) care:
-- Limit public spending by limiting competition
-- Prevalence of certificate of need (CON) laws
-
----
-# Effects of reduced competition
-1. Higher prices
-2. Lower quality, [2020 NEJM Paper](https://www.nejm.org/doi/full/10.1056/NEJMsa1901383)
-3. Maybe lower costs (but not passed on to lower prices)<br>
-
---
-
-Effects for both "in-market" and "out-of-market" mergers
 
 ---
 # Types of hospitals involved in mergers
+
 .center[
   ![](images/nihcm-hospital-types.jpg)
 ]
+
 
 ---
 # Types of hospitals involved in mergers
@@ -535,6 +530,7 @@ Effects for both "in-market" and "out-of-market" mergers
 
 ---
 # Different merger types
+
 Essentially two types of mergers:
 
 1. "Within-market"
@@ -544,14 +540,6 @@ Essentially two types of mergers:
 ---
 # Within-market mergers
 
-- Most well-understood merger type
-- Established tools for examination in anti-trust
-- Defining the market is still a contentious issue
-
----
-# Within-market mergers
-
-- Listed previously (Emory-DeKalb, etc.)
 - **Big** price effects
   - 20 to 40% in many studies
   - Up to 60% in some studies
@@ -560,12 +548,6 @@ Essentially two types of mergers:
 - Account for about 50% of all mergers since 2000
 
 
----
-# Out-of-market mergers
-
-- Less understood
-- No formal structure for analyzing in court
-- These types of mergers are essentially permitted without risk of DOJ/FTC challenge
 
 ---
 # Out-of-market mergers
@@ -593,9 +575,32 @@ Essentially two types of mergers:
 ]
 
 ---
+# Effects of reduced competition
+1. Higher prices
+2. Lower quality, [2020 NEJM Paper](https://www.nejm.org/doi/full/10.1056/NEJMsa1901383)
+3. Maybe lower costs (but not passed on to lower prices)<br>
+
+
+---
+# Why?
+Historical perception of hospital competition as "wasteful" and assumption that more capacity means more (unnecessary) care:
+- Certificate of need laws
+- Certificate of public advantage
+- Scope of practice laws
+- Any willing provider laws
+- Site-based payment differentials (encourage vertical integration)
+
+
+---
 # Where do we go frome here?
 
 1. Adopt sensible policies
 
 2. Antitrust enforcement
 
+
+---
+class: clear, center
+
+
+![:scale 75%](https://media.giphy.com/media/26xBxZdlxksm4oCje/giphy.gif)
