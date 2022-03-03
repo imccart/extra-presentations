@@ -78,9 +78,7 @@ class: inverse
 
 2. [The System is Confusing](#complex)
 
-3. [Prices are Really High!](#high)
-
-4. [Economics can help](#economics)
+3. [Economics can help](#economics)
 
 
 <!-- New Section -->
@@ -355,6 +353,7 @@ class: clear, middle
 ![:scale 70%](images/price-compare6.png)
 ]
 
+
 ---
 # 4. Confusing pricing
 
@@ -371,6 +370,8 @@ Our fragmented system has led to a ridiculously complex and convoluted billing p
 
 ---
 # 4. Confusing pricing
+
+Confusing because there are lots of definitions for a "price":
 
 - Negotiation with private insurers (bargaining problem)
 - Set payment from Medicare and Medicaid
@@ -389,7 +390,7 @@ Price $\neq$ charge $\neq$ cost $\neq$ patient out-of-pocket spending
 # 4. Confusing pricing
 
 .center[
-  ![:scale 65%](images/DifferentPrices.jpg)
+  ![:scale 60%](images/DifferentPrices.jpg)
 ]
 
 <div class="smalltext">Source: <a href="https://healthcarepricingproject.org/">Health Care Pricing Project</a></div>
@@ -426,51 +427,6 @@ Some hope here following the **No Surprises Act** (in effect January 2022):
 --
 
 - **But** patient can be asked to waive rights
-
-<!-- New Section -->
----
-class: inverse, center, middle
-name: high
-
-# High prices!
-
-<html><div style='float:left'></div><hr color='#EB811B' size=1px width=1055px></html>
-
-
----
-# What is a hospital price?
-
-Not clear what exactly is negotiated...
-
---
-.pull-left[
-### Fee-for-service
-- price per procedure
-- percentage of charges
-- markup over Medicare rates
-]
-
---
-.pull-right[
-### Capitation
-- payment per patient
-- pay-for-performance
-- shared savings
-]
-
-
----
-# Hospital price variation
-
-.pull-left[
-  ![](images/HC_var_withinmkt_hip_ga_atlanta.png)
-]
-
-.pull-right[
-  ![](images/HC_var_withinmkt_kmri_ga_atlanta.png)
-]
-
-<div class="smalltext">Source: <a href="https://healthcarepricingproject.org/">Health Care Pricing Project</a></div>
 
 
 <!-- New Section -->
