@@ -369,19 +369,8 @@ Our fragmented system has led to a ridiculously complex and convoluted billing p
 <div class="smalltext">Brill, Steven. 2013. "Bitter Pill: Why Medical Bills are Killing Us." *Time Magazine*.</div>
 
 
-
-
-<!-- New Section -->
 ---
-class: inverse, center, middle
-name: high
-
-# Why are prices so high?
-
-<html><div style='float:left'></div><hr color='#EB811B' size=1px width=1055px></html>
-
----
-# How are prices generated?
+# 4. Confusing pricing
 
 - Negotiation with private insurers (bargaining problem)
 - Set payment from Medicare and Medicaid
@@ -397,13 +386,40 @@ Price $\neq$ charge $\neq$ cost $\neq$ patient out-of-pocket spending
 
 
 ---
-# Why does it matter?
+# 4. Confusing pricing
 
 .center[
   ![:scale 65%](images/DifferentPrices.jpg)
 ]
 
 <div class="smalltext">Source: <a href="https://healthcarepricingproject.org/">Health Care Pricing Project</a></div>
+
+
+
+---
+# 5. Crazy billing practices
+
+.center[
+  ![:scale 65%](images/surprise-ed.png)
+]
+
+
+---
+# 5. Crazy billing practices
+
+.center[
+  ![:scale 65%](images/surprise-ip.png)
+]
+
+
+<!-- New Section -->
+---
+class: inverse, center, middle
+name: high
+
+# Why are prices so high?
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=1055px></html>
 
 
 ---
@@ -429,7 +445,7 @@ Not clear what exactly is negotiated...
 
 
 ---
-# Hospital prices in real life
+# Hospital price variation
 
 .pull-left[
   ![](images/HC_var_withinmkt_hip_ga_atlanta.png)
@@ -501,9 +517,9 @@ Almost any way you define it, hospital markets are more and more concentrated (l
 ---
 # Hospital concentration over time
 
-- More data and [interactive report](https://healthcostinstitute.org/hcci-originals/healthy-marketplace-index/hmi) from the Health Care Cost Institute.
-
-- [Presentation](https://nihcm.org/publications/hospital-consolidation-trends-impacts-outlook) from the National Institute for Health Care Management
+.center[
+<iframe width="800" height="500" src="https://healthcostinstitute.org/hcci-originals/hmi-interactive#HMI-Concentration-Index" frameborder="0" allowfullscreen></iframe>
+]
 
 
 ---
