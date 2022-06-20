@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Healthy Reviews! Online Physician Ratings Reduce Healthcare Interruptions</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Discussant: Ian McCarthy" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <script src="libs/fabric/fabric.min.js"></script>
+    <link href="libs/xaringanExtra-scribble/scribble.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-scribble/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#E68080"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Healthy Reviews! Online Physician Ratings Reduce Healthcare Interruptions
+]
+.subtitle[
+## Presenter: Danny R. Hughes
+]
+.author[
+### Discussant: Ian McCarthy
+]
+.date[
+### ASHEcon Annual Meeting, June 29, 2022
+]
+
+---
+
+
+&lt;!-- Adjust some CSS code for font size, maintain R code font size --&gt;
+&lt;style type="text/css"&gt;
+.remark-slide-content {
+    font-size: 30px;
+    padding: 1em 2em 1em 2em;    
+}
+.remark-code, .remark-inline-code { 
+    font-size: 20px;
+}
+&lt;/style&gt;
+
+
+&lt;!-- Set R options for how code chunks are displayed and load packages --&gt;
+
+
+
+
+
+
+
+# Consumer search
+- Highly relevant and underappreciated structure for studying health care decisions
+- Basic idea:
+  - Patients incur a cost to accessing/assimilating information about physicians
+  - Patients have some beliefs about their utilities over all possible options
+  - Patients stop searching when costs meet or exceed expected benefits
+
+---
+# Context
+- Physicians retire and patients must find a new physician
+- Online reviews lower the cost of this search and increase probability of a more recent visit to a new physician (not sure that the first implies the second, but more on this later)
+
+---
+# Looking for New PCP
+
+.center[
+&lt;img src="ashecon-2022-hughes_files/figure-html/unnamed-chunk-2-1.png" style="display: block; margin: auto;" /&gt;
+]
+
+
+MedPAC *Report to Congress*, March 2012 and March 2020
+
+
+---
+# Finding a PCP among Medicare and MA
+
+.center[
+&lt;img src="ashecon-2022-hughes_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" /&gt;
+]
+
+MedPAC *Report to Congress*, March 2012 and March 2020
+
+
+---
+# Finding a PCP among Commercial Insurance
+
+.center[
+&lt;img src="ashecon-2022-hughes_files/figure-html/unnamed-chunk-4-1.png" style="display: block; margin: auto;" /&gt;
+]
+
+MedPAC *Report to Congress*, March 2012 and March 2020
+
+
+---
+# Approach
+- Research design: DD
+- Sample: Patients of retired physicians in two periods
+- Pre period: 2007-2010
+- Post period: 2015-2018
+- Control (Treatment): 18 (16) top 100 population cities, based on cities with fewest (most) Yelp reviews per capita and nonmissing reviews in pre and post period
+
+---
+class: inverse, center, middle
+name: questions
+
+# Some thoughts and questions
+
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=1055px&gt;&lt;/html&gt;
+
+
+---
+# Practical motivation
+- Do people use Yelp to find new PCPs?
+- You write, "...a relatively small proportion of patients rely on these platforms for choosing their physicians."
+- But some work **does** suggest that patients value online reviews in health care
+
+
+---
+# Theoretical motivation
+- Really like the idea, but...
+- Paper considers search as decision to find a physician today or not
+- Are patients "searching" over physicians, or are they just deciding whether to take an action on a given day?
+- Is `\(v\)` independent of `\(E[Days]\)`? How?
+- Searching for a physician on a given day is not the same as visiting the physician that day
+  - Search could *increase* time to visit because patients are drawn to the most capacity-constrained physicians
+  - How should I think of waiting time here?
+  
+  
+---
+# General concern
+- Treated cities very different than control cities (e.g., Laredo vs Anaheim), probably not just in levels
+- Could relate to practice sizes and consolidation, thereby affecting within-practice referrals
+- Null results (using days) when including retirement year/quarter FEs
+
+---
+# Identification and estimation
+- Is 2x2 DD appropriate here? 
+  - Treatment/control is continuous (availability of online reviews)
+- IV using other Yelp reviews
+  - Does this satisfy exclusion restriction? Only conditional on overall use of Yelp
+  - Not if early adoption of Yelp (in general) is correlated with unobservables or if Yelp causes additional retirements
+- Are cities the right level of treatment/control?
+  - Laredo is isolated, Anaheim is right next to LA
+  
+---
+# Some potential considerations...
+1. More (or fewer) details on model
+2. Treatment at county or HRR-level instead of city/zip
+3. Measure visits at practice-level instead of physician-level
+4. Visualizations of physician markets over time between treatment/control (total retirements, number of physicians, number of practices, size of practices, etc.)
+
+Bonus question: Why do physician's retire and where do they retire most?
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
