@@ -1,0 +1,131 @@
+---
+title: "Peer Participation in the Medicare Shared Savings Program"
+subtitle: "Presenter: Youcheng Hou"
+author: "Discussant: Ian McCarthy"
+date: "ASHEcon Annual Meeting, June 28, 2022"
+header-includes: 
+  - \usepackage{graphicx}
+  - \usepackage{amsmath}
+  - \usepackage{includepdf}
+  - \usepackage{pgf}
+  - \usepackage{tikz}
+  - \usepackage{pgfplots}
+  - \usepackage{pdftools}
+  - \pgfplotsset{compat=1.15}
+  - \usepackage{mathrsfs}
+  - \usetikzlibrary{arrows}
+  - \usetikzlibrary{patterns}  
+output:
+#  html_document: default (toggle on for "simplified" view)
+  xaringan::moon_reader:
+    css: [default, metropolis, metropolis-fonts, custom.css] 
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      beforeInit: ["macros.js","https://platform.twitter.com/widgets.js"]
+#knit: pagedown::chrome_print
+---
+
+<!-- Adjust some CSS code for font size, maintain R code font size -->
+<style type="text/css">
+.remark-slide-content {
+    font-size: 30px;
+    padding: 1em 2em 1em 2em;    
+}
+.remark-code, .remark-inline-code { 
+    font-size: 20px;
+}
+</style>
+
+
+<!-- Set R options for how code chunks are displayed and load packages -->
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+options(dplyr.summarise.inform = FALSE)
+library(knitr)
+opts_chunk$set(
+  fig.align="center",  
+  fig.height=3, #fig.width=6,
+  # out.width="748px", #out.length="520.75px",
+  dpi=300, #fig.path='Figs/',
+  cache=T#, echo=F, warning=F, message=F
+  )
+
+knitr::opts_hooks$set(fig.callout = function(options) {
+  if(options$fig.callout) {
+    options$echo = FALSE
+  }
+  options
+})
+
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse, ggplot2, dplyr, lubridate, readr, readxl, hrbrthemes,scales, gganimate, gapminder, gifski, png, tufte, plotly, OECD, ggrepel, xaringanExtra, webshot)
+```
+
+
+```{r xaringan-scribble, echo=FALSE}
+xaringanExtra::use_scribble(rgb(0.9, 0.5, 0.5))
+```
+
+
+# Physician networks and voluntary participation
+- Lots of work measuring static physician networks
+- Very little work studying the effects of such networks
+  - Even less work on the formation and evolution of those networks (more on this later)
+- Similarly very little work on voluntary program participation in health care
+  - Look into "Selection and Causal Effects under Voluntary Programs" by Gupta et al.
+
+---
+# This paper
+*Main Question*: Does my peers' participation in a shared savings program affect my own participation?
+
+<br>
+*Approach*: LPM regression of my participation against a weighted average of my lagged peers' participation, instrumented using lagged peers-of-peers
+
+<br>
+A ton of impressive data work!
+
+---
+# Some descriptive work
+- Would love to see some graphs describing the networks, especially the instrument (peer-of-peers)
+
+
+---
+class: inverse, center, middle
+name: questions
+
+# Some thoughts and questions
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=1055px></html>
+
+
+---
+# Reflection
+- Are lagged values necessary?
+- Already using leave-one-out peer average
+- Ahn and Trogdon (2017) use contemporaneous (leave-one-out) peer average with lagged peer-of-peer average as instrument
+
+---
+# Weighting
+- Results much larger when not weighting peer averages by patient counts
+- Could instead be a reflection of measurement error in the peer group (Angrist, 2014)
+
+---
+# Mechanisms
+- HHI highly correlated with peer group structure
+- Is recruitment effect identified separately from "social learning"?
+- Recruitment is a two-way street...more likely to recruit if program is running successfully
+- Suggests that, as I learn about my peers' performance, recruitment may be harder or easier
+  - Is there some way to exploit "successfull" versus "unsuccessful" ACOs here?
+
+---
+# Network formation
+- Is my peer-of-peer exogenous?
+  - If the existence of an edge is endogenous, then the absence of an edge should be endogenous too
+- Analysis allows for time varying peer groups, but what assumptions are needed on the evolution of the network
+- Given the need for sufficiently large ACOs, practices must be forward-thinking
+  - Could you exploit system-level information here? Plausibly exogenous shock to ACO participation
+
