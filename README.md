@@ -14,5 +14,5 @@ This repo just collects a few additional presentations outside of any specific r
 -   [ASHEcon, June 2021, Curto 2021](ashecon-2021-curto.html) Slides for discussion of *Vertical integration among health care providers in Massachusetts* presented by Vilsa Curto
 -   [SHESG, October 2021, Wendling 2021](shesg-2021-wendling.html) Slides for discussion of *The Effect of Physician Group Mergers on the Health Outcomes of Medicare Beneficiaries* presented by Brett Wendling
 -   [ASHEcon, June 2022, Hughes 2022](ashecon-2022-hughes.html) Slides for discussion of *Healthy Reviews! Online Physician Ratings Reduce Healthcare Interruptions* presented by Danny Hughes
-
+-   [ASHEcon, June 2022, Hou 2022](ashecon-2022-hou.html) Slides for discussion of *Peer Participation in the Medicare Shared Savings Program* presented by Youcheng Hou
 
