@@ -15,4 +15,4 @@ This repo just collects a few additional presentations outside of any specific r
 -   [SHESG, October 2021, Wendling 2021](shesg-2021-wendling.html) Slides for discussion of *The Effect of Physician Group Mergers on the Health Outcomes of Medicare Beneficiaries* presented by Brett Wendling
 -   [ASHEcon, June 2022, Hughes 2022](ashecon-2022-hughes.html) Slides for discussion of *Healthy Reviews! Online Physician Ratings Reduce Healthcare Interruptions* presented by Danny Hughes
 -   [ASHEcon, June 2022, Hou 2022](ashecon-2022-hou.html) Slides for discussion of *Peer Participation in the Medicare Shared Savings Program* presented by Youcheng Hou
-
+-   [ASHEcon, June 2022, Stecher 2022](ashecon-2022-stecher.html) Slides for discussion of *Reducing Racial Disparities through Experience: Evidence from Medical Device Choice in Cardiac Catherization Labs* presented by Chad Stecher
