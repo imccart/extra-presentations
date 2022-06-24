@@ -1,7 +1,7 @@
 ---
 title: "Healthy Reviews! Online Physician Ratings Reduce Healthcare Interruptions"
-subtitle: "Presenter: Danny R. Hughes"
-author: "Discussant: Ian McCarthy"
+subtitle: "Presenter: Danny R. Hughes, Georgia Tech"
+author: "Discussant: Ian McCarthy, Emory University and NBER"
 date: "ASHEcon Annual Meeting, June 29, 2022"
 header-includes: 
   - \usepackage{graphicx}
@@ -26,7 +26,7 @@ output:
       countIncrementalSlides: false
       ratio: "16:9"
       beforeInit: ["macros.js","https://platform.twitter.com/widgets.js"]
-#knit: pagedown::chrome_print
+knit: pagedown::chrome_print
 ---
 
 <!-- Adjust some CSS code for font size, maintain R code font size -->
