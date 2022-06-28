@@ -88,6 +88,16 @@ xaringanExtra::use_scribble(rgb(0.9, 0.5, 0.5))
 <br>
 A ton of impressive data work!
 
+
+
+---
+class: inverse, center, middle
+name: questions
+
+# Some thoughts and questions
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=1055px></html>
+
 ---
 # Some descriptive work
 - Would love to see some graphs describing the networks, especially the instrument (peer-of-peers)
@@ -99,15 +109,6 @@ A ton of impressive data work!
 
 
 ---
-class: inverse, center, middle
-name: questions
-
-# Some thoughts and questions
-
-<html><div style='float:left'></div><hr color='#EB811B' size=1px width=1055px></html>
-
-
----
 # Reflection
 - Are lagged values necessary?
 - Already using leave-one-out peer average
@@ -116,7 +117,7 @@ name: questions
 ---
 # Weighting
 - Results much larger when not weighting peer averages by patient counts
-- Could instead be a reflection of measurement error in the peer group (Angrist, 2014)
+- Could instead be a reflection of measurement error in the peer group instrument (Angrist, 2014)
 
 ---
 # Mechanisms
@@ -124,7 +125,7 @@ name: questions
 - Is recruitment effect identified separately from "social learning"?
 - Recruitment is a two-way street...more likely to recruit if program is running successfully
 - Suggests that, as I learn about my peers' performance, recruitment may be harder or easier
-  - Is there some way to exploit "successfull" versus "unsuccessful" ACOs here?
+  - Is there some way to leverage "successful" versus "unsuccessful" ACOs here?
 
 ---
 # Network formation
