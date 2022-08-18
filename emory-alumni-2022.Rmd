@@ -243,11 +243,11 @@ Price $\neq$ charge $\neq$ cost $\neq$ patient out-of-pocket spending
 
 
 .pull-left[
-  ![:scale 70%](images/HC_var_withinmkt_hip_ga_atlanta.png)
+  ![:scale 80%](images/HC_var_withinmkt_hip_ga_atlanta.png)
 ]
 
 .pull-right[
-  ![:scale 70%](images/HC_var_withinmkt_kmri_ga_atlanta.png)
+  ![:scale 80%](images/HC_var_withinmkt_kmri_ga_atlanta.png)
 ]
 
 
@@ -355,10 +355,16 @@ Graduate program:
 - Economics program focus on health as a subfield of economics
 - 20-30% of our graduate students are specifically interested in health
 
+---
+# Health economics at Emory
+
 Undergraduate program:
 - Significant interest in health policy and pre-med
 - Recent launch of joint major in economics and human health
 - 35 majors right now
+
+---
+# Health economics at Emory
 
 Rollins School
 - Strong collaboration with Department of Health Policy and Management
@@ -368,16 +374,24 @@ Rollins School
 ---
 # Some success stories
 
-- Undergraduate: 
-    - Many examples of placements in health-related companies (startups, consulting, Aetna)
-    - MPH at Johns Hopkins and Michigan
-    - Harvard Law School and Harvard Medical School
-    - Rising senior in Econ-HH, featured speaker at Georgia CTSA Conference and accepted to World Stroke Conference in Singapore
-- Econ PhD Graduate:
-    - Eric Nesson (Ball State)
-    - James Robinson (UAB)
-    - Otto Lenhart (Glasgow)
-    - Kaylyn Sanbower (U.S. Department of Justice)
-- Rollins PhD Graduate:
-    - Lindsay Allen (WVU, now Northwestern)
-    - Manasvini Singh (UMass Amherst)
+Undergraduate: 
+- Many examples of placements in health-related companies (startups, consulting, Aetna)
+- MPH at Johns Hopkins and Michigan
+- Harvard Law School and Harvard Medical School
+- Rising senior in Econ-HH, featured speaker at Georgia CTSA Conference and accepted to World Stroke Conference in Singapore
+
+---
+# Some success stories
+
+Econ PhD Graduates:
+- Eric Nesson (Ball State)
+- James Robinson (UAB)
+- Otto Lenhart (Glasgow)
+- Kaylyn Sanbower (U.S. Department of Justice)
+
+---
+# Some success stories
+
+Rollins PhD Graduates:
+- Lindsay Allen (WVU, now Northwestern)
+- Manasvini Singh (UMass Amherst)
