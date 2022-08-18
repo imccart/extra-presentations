@@ -76,7 +76,7 @@ class: inverse
 
 1. [Quality is "Meh"](#health)
 
-2. [The System is Confusing](#complex)
+2. [Lots of reasons](#complex)
 
 3. [Economics can help](#economics)
 
