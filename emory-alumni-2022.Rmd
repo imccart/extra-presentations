@@ -1,5 +1,5 @@
 ---
-title: "Sticker Shock! Economics and Healthcare Pricing"
+title: "Sticker Shock! Economics and Health Care Pricing"
 subtitle: "and health economics at Emory"
 author: Ian McCarthy | Emory University
 date: "Tuesday, August 23, 2022"
@@ -395,3 +395,10 @@ Econ PhD Graduates:
 Rollins PhD Graduates:
 - Lindsay Allen (WVU, now Northwestern)
 - Manasvini Singh (UMass Amherst)
+
+
+---
+class: inverse, center, middle
+name: health
+
+# Thank You!
