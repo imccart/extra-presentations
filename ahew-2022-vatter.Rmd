@@ -1,12 +1,16 @@
 ---
-title: "Quality Disclosure and Regulation: Scoring Design in Medicare Advantage"
-subtitle: "Author: Benjamin Vatter, Stanford University"
-author: "Discussant: Ian McCarthy, Emory University and NBER"
+title: "Quality Disclosure and Regulation"
+subtitle: "Scoring Design in Medicare Advantage"
+author: 
+- "**Author:** Benjamin Vatter, Stanford University"
+- "**Discussant:** Ian McCarthy, Emory University and NBER"
 date: "AHEW, October 1, 2022"
 header-includes: 
   - \usepackage{graphicx}
   - \usepackage{amsmath}
+  - \usepackage{amssymb}  
   - \usepackage{includepdf}
+  - \usepackage{bm}
   - \usepackage{pgf}
   - \usepackage{tikz}
   - \usepackage{pgfplots}
@@ -70,5 +74,310 @@ pacman::p_load(tidyverse, ggplot2, dplyr, lubridate, readr, readxl, hrbrthemes,s
 xaringanExtra::use_scribble(rgb(0.9, 0.5, 0.5))
 ```
 
+# Endogenous quality decisions in Spence (1975)
 
-# Medicare Advantage
+- **Setting:** Monopoly (or oligopoly) when firms set both price and quality
+- **Intuition:** Firm invests to the point where marginal quality valuation meets marginal costs of quality, but socially optimal quality depends on average valuation
+- **Takeaway:** Profit-maximizing quality will differ from socially optimal quality when the marginal customer is not representative of the average
+
+--
+
+Natural in the presence of adverse selection, where the marginal patient is almost always different from the average patient
+
+---
+# Solution to sub-optimal quality
+
+- Regulator can improve quality via coarse rating scores
+
+
+---
+# Quality Disclosure
+
+- Self-disclosed quality via advertising
+- Word-of-mouth and aggregated reviews form users (Google, Rotten Tomatoes, etc.)
+- Third-party rating agencies
+- Government regulation via mandated disclosure or licensing
+
+
+---
+# Mandated Disclosure
+
+- 
+
+---
+# Setup
+```{tikz tikz-timeline, echo=FALSE, fig.ext='png', cache=TRUE}
+\begin{tikzpicture}[scale=1]
+		% time line
+		\draw [thick,->, color=black] (0,0) -- (12.2,0);
+		\node[align=right, color=black] at (12.4, 0) {t};
+		
+		% First stage
+		\draw[thick, color=black] (0, 3pt) -- (0, -3pt);
+		\node[align=center, color=black] at (0,-0.3) {1};
+	
+		
+		% Second stage
+		\draw[thick, color=black] (3, 3pt) -- (3, -3pt);
+		\node[align=center, color=black] at (3,-0.3) {2};
+
+		
+		% Nature realization
+		\draw[thick, color=black] (6, 3pt) -- (6, -3pt);
+
+		
+		% Third stage
+		\draw[thick, color=black] (9, 3pt) -- (9, -3pt);
+		\node[align=center, color=black] at (9,-0.3) {3};
+		
+
+		% Fourth stage
+		\draw[thick, color=black] (12, 3pt) -- (12, -3pt);
+		\node[align=center, color=black] at (12,-0.3) {4};
+
+    % Labels
+    \node[align=center, color=gray] at (0,.5) {Scoring $\psi$};
+		\node[align=center, color=gray] at (3,.5) {Investments $\boldsymbol{x}$};
+		\node[align=center, color=gray] at (6,.5) {Quality $\boldsymbol{q} \sim F(\cdot|\boldsymbol{x})$};
+		\node[align=center, color=gray] at (9,.5) {Prices $\boldsymbol{p}$};
+		\node[align=center, color=gray] at (12,.5) {$D(\boldsymbol{p}, \psi(\boldsymbol{q}), \psi)$};
+
+\end{tikzpicture}
+```
+
+---
+# Setup
+```{tikz tikz-new, echo=FALSE, fig.ext='png', cache=TRUE}
+\begin{tikzpicture}[scale=1]
+		% time line
+		\draw [thick,->, color=black] (0,0) -- (12.2,0);
+		\node[align=right, color=black] at (12.4, 0) {t};
+		
+		% First stage
+		\draw[thick, color=black] (0, 3pt) -- (0, -3pt);
+		\node[align=center, color=black] at (0,-0.3) {1};
+	
+		
+		% Second stage
+		\draw[thick, color=black] (3, 3pt) -- (3, -3pt);
+		\node[align=center, color=black] at (3,-0.3) {2};
+
+		
+		% Nature realization
+		\draw[thick, color=black] (6, 3pt) -- (6, -3pt);
+
+		
+		% Third stage
+		\draw[thick, color=black] (9, 3pt) -- (9, -3pt);
+		\node[align=center, color=black] at (9,-0.3) {3};
+		
+
+		% Fourth stage
+		\draw[thick, color=black] (12, 3pt) -- (12, -3pt);
+		\node[align=center, color=black] at (12,-0.3) {4};
+
+    % Labels
+    \node[align=center, color=orange] at (0,.5) {Scoring $\psi$};
+		\node[align=center, color=orange] at (3,.5) {Investments $\boldsymbol{x}$};
+		\node[align=center, color=gray!50!orange] at (6,.5) {Quality $\boldsymbol{q} \sim F(\cdot|\boldsymbol{x})$};
+		\node[align=center, color=gray] at (9,.5) {Prices $\boldsymbol{p}$};
+		\node[align=center, color=gray] at (12,.5) {$D(\boldsymbol{p}, \psi(\boldsymbol{q}), \psi)$};
+
+\end{tikzpicture}
+```
+
+**What's new here?**
+- Endogenous quality investments with imperfect mapping into quality scores
+- Endogenous scoring design
+
+
+---
+# Setup (Stage 4)
+
+```{tikz tikz-4, echo=FALSE, fig.ext='png', cache=TRUE}
+\begin{tikzpicture}[scale=1]
+		% time line
+		\draw [thick,->, color=black] (0,0) -- (12.2,0);
+		\node[align=right, color=black] at (12.4, 0) {t};
+		
+		% First stage
+		\draw[thick, color=black] (0, 3pt) -- (0, -3pt);
+		\node[align=center, color=black] at (0,-0.3) {1};
+	
+		
+		% Second stage
+		\draw[thick, color=black] (3, 3pt) -- (3, -3pt);
+		\node[align=center, color=black] at (3,-0.3) {2};
+
+		
+		% Nature realization
+		\draw[thick, color=black] (6, 3pt) -- (6, -3pt);
+
+		
+		% Third stage
+		\draw[thick, color=black] (9, 3pt) -- (9, -3pt);
+		\node[align=center, color=black] at (9,-0.3) {3};
+		
+
+		% Fourth stage
+		\draw[thick, color=black] (12, 3pt) -- (12, -3pt);
+		\node[align=center, color=black] at (12,-0.3) {4};
+
+    % Labels
+    \node[align=center, color=gray] at (0,.5) {Scoring $\psi$};
+		\node[align=center, color=gray] at (3,.5) {Investments $\boldsymbol{x}$};
+		\node[align=center, color=gray] at (6,.5) {Quality $\boldsymbol{q} \sim F(\cdot|\boldsymbol{x})$};
+		\node[align=center, color=gray] at (9,.5) {Prices $\boldsymbol{p}$};
+		\node[align=center, color=orange] at (12,.5) {$D(\boldsymbol{p}, \psi(\boldsymbol{q}), \psi)$};
+
+\end{tikzpicture}
+```
+
+$$u_{ij} = \underbrace{\alpha_i P_{j}}_{\text{premium}} + \underbrace{\beta_i b_{j}}_{\text{coverage}} + \underbrace{\mathcal{E}_{\psi}[\boldsymbol{\gamma}'\boldsymbol{q}|\psi(q_{j})]}_{\text{quality}}  + \underbrace{\lambda'z_{ij}}_{\substack{\text{Obs.}\\\text{attributes}}} + \underbrace{\xi_{j}}_{\substack{\text{unobs.}\\\text{preferences}}} + \underbrace{\varepsilon_{ij}}_{\sim \text{T1EV}}$$
+
+
+---
+# Setup (Stage 3)
+```{tikz tikz-3, echo=FALSE, fig.ext='png', cache=TRUE}
+\begin{tikzpicture}[scale=1]
+		% time line
+		\draw [thick,->, color=black] (0,0) -- (12.2,0);
+		\node[align=right, color=black] at (12.4, 0) {t};
+		
+		% First stage
+		\draw[thick, color=black] (0, 3pt) -- (0, -3pt);
+		\node[align=center, color=black] at (0,-0.3) {1};
+	
+		
+		% Second stage
+		\draw[thick, color=black] (3, 3pt) -- (3, -3pt);
+		\node[align=center, color=black] at (3,-0.3) {2};
+
+		
+		% Nature realization
+		\draw[thick, color=black] (6, 3pt) -- (6, -3pt);
+
+		
+		% Third stage
+		\draw[thick, color=black] (9, 3pt) -- (9, -3pt);
+		\node[align=center, color=black] at (9,-0.3) {3};
+		
+
+		% Fourth stage
+		\draw[thick, color=black] (12, 3pt) -- (12, -3pt);
+		\node[align=center, color=black] at (12,-0.3) {4};
+
+    % Labels
+    \node[align=center, color=gray] at (0,.5) {Scoring $\psi$};
+		\node[align=center, color=gray] at (3,.5) {Investments $\boldsymbol{x}$};
+		\node[align=center, color=gray] at (6,.5) {Quality $\boldsymbol{q} \sim F(\cdot|\boldsymbol{x})$};
+		\node[align=center, color=orange] at (9,.5) {Prices $\boldsymbol{p}$};
+		\node[align=center, color=gray] at (12,.5) {$D(\boldsymbol{p}, \psi(\boldsymbol{q}), \psi)$};
+
+\end{tikzpicture}
+```
+
+$$\pi_{f}(\boldsymbol{q}, \psi) = \max_{\{p_j\}_{j \in J_{f}}} \sum_{j \in J_{f}}\underbrace{D_{j}(\boldsymbol{p}, \psi(\boldsymbol{q}))}_{\text{demand}} (\underbrace{R_j(p_j)}_{\text{mg. revenue}} - \underbrace{C(\boldsymbol{q}_j, \boldsymbol{z}_{j}, \boldsymbol{\theta}_j)}_{\text{mg. cost}})$$
+
+---
+# Setup (Stage 2)
+```{tikz tikz-2, echo=FALSE, fig.ext='png', cache=TRUE}
+\begin{tikzpicture}[scale=1]
+		% time line
+		\draw [thick,->, color=black] (0,0) -- (12.2,0);
+		\node[align=right, color=black] at (12.4, 0) {t};
+		
+		% First stage
+		\draw[thick, color=black] (0, 3pt) -- (0, -3pt);
+		\node[align=center, color=black] at (0,-0.3) {1};
+	
+		
+		% Second stage
+		\draw[thick, color=black] (3, 3pt) -- (3, -3pt);
+		\node[align=center, color=black] at (3,-0.3) {2};
+
+		
+		% Nature realization
+		\draw[thick, color=black] (6, 3pt) -- (6, -3pt);
+
+		
+		% Third stage
+		\draw[thick, color=black] (9, 3pt) -- (9, -3pt);
+		\node[align=center, color=black] at (9,-0.3) {3};
+		
+
+		% Fourth stage
+		\draw[thick, color=black] (12, 3pt) -- (12, -3pt);
+		\node[align=center, color=black] at (12,-0.3) {4};
+
+    % Labels
+    \node[align=center, color=gray] at (0,.5) {Scoring $\psi$};
+		\node[align=center, color=orange] at (3,.5) {Investments $\boldsymbol{x}$};
+		\node[align=center, color=gray] at (6,.5) {Quality $\boldsymbol{q} \sim F(\cdot|\boldsymbol{x})$};
+		\node[align=center, color=gray] at (9,.5) {Prices $\boldsymbol{p}$};
+		\node[align=center, color=gray] at (12,.5) {$D(\boldsymbol{p}, \psi(\boldsymbol{q}), \psi)$};
+
+\end{tikzpicture}
+```
+
+
+$$\max_{\boldsymbol{x}_f \in \mathbb{R}^{|\mathcal{Q}| \times |J_f|}}  \underbrace{\int  E\left[\pi_{f}(\boldsymbol{q}_f, \boldsymbol{q}_{-f}, \psi)\right] dF(\boldsymbol{q}_f|\boldsymbol{x}_f)}_{\text{expected insurance profit}} - \underbrace{I(\boldsymbol{x}_f, \boldsymbol{\mu}_{\boldsymbol{f}})}_{\text{investment cost}}$$
+
+
+---
+# Setup (Stage 1)
+```{tikz tikz-1, echo=FALSE, fig.ext='png', cache=TRUE}
+\begin{tikzpicture}[scale=1]
+		% time line
+		\draw [thick,->, color=black] (0,0) -- (12.2,0);
+		\node[align=right, color=black] at (12.4, 0) {t};
+		
+		% First stage
+		\draw[thick, color=black] (0, 3pt) -- (0, -3pt);
+		\node[align=center, color=black] at (0,-0.3) {1};
+	
+		
+		% Second stage
+		\draw[thick, color=black] (3, 3pt) -- (3, -3pt);
+		\node[align=center, color=black] at (3,-0.3) {2};
+
+		
+		% Nature realization
+		\draw[thick, color=black] (6, 3pt) -- (6, -3pt);
+
+		
+		% Third stage
+		\draw[thick, color=black] (9, 3pt) -- (9, -3pt);
+		\node[align=center, color=black] at (9,-0.3) {3};
+		
+
+		% Fourth stage
+		\draw[thick, color=black] (12, 3pt) -- (12, -3pt);
+		\node[align=center, color=black] at (12,-0.3) {4};
+
+    % Labels
+    \node[align=center, color=orange] at (0,.5) {Scoring $\psi$};
+		\node[align=center, color=gray] at (3,.5) {Investments $\boldsymbol{x}$};
+		\node[align=center, color=gray] at (6,.5) {Quality $\boldsymbol{q} \sim F(\cdot|\boldsymbol{x})$};
+		\node[align=center, color=gray] at (9,.5) {Prices $\boldsymbol{p}$};
+		\node[align=center, color=gray] at (12,.5) {$D(\boldsymbol{p}, \psi(\boldsymbol{q}), \psi)$};
+
+\end{tikzpicture}
+```
+
+- No objective function imposed on regulator
+- Once set, scoring design is known to insurers and beneficiaries
+
+---
+# Comment on Information
+
+- Insurers are probably sufficiently aware of scoring design...are beneficiaries?
+
+
+---
+# Comment on Scoring Design
+
+- Some complicating factors in current design:
+    - Penalty for high-variance contracts
+    - Part D
+    - Bonuses for high scores
