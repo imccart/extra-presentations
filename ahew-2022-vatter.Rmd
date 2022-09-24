@@ -32,6 +32,8 @@ output:
       beforeInit: ["macros.js","https://platform.twitter.com/widgets.js"]
 knit: pagedown::chrome_print
 ---
+class: inverse, center, middle
+
 
 <!-- Adjust some CSS code for font size, maintain R code font size -->
 <style type="text/css">
@@ -74,7 +76,22 @@ pacman::p_load(tidyverse, ggplot2, dplyr, lubridate, readr, readxl, hrbrthemes,s
 xaringanExtra::use_scribble(rgb(0.9, 0.5, 0.5))
 ```
 
-# Endogenous quality decisions in Spence (1975)
+# What's the point?
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=1055px></html>
+
+
+---
+# 1. Types of quality disclosure
+
+- Self-disclosed quality via advertising
+- Word-of-mouth and aggregated reviews form users (Google, Rotten Tomatoes, etc.)
+- Third-party rating agencies
+- **Government regulation via mandated disclosure or licensing**
+
+
+---
+# 2. Endogenous quality (Spence, 1975)
 
 - **Setting:** Monopoly (or oligopoly) when firms set both price and quality
 - **Intuition:** Firm invests to the point where marginal quality valuation meets marginal costs of quality, but socially optimal quality depends on average valuation
@@ -84,28 +101,83 @@ xaringanExtra::use_scribble(rgb(0.9, 0.5, 0.5))
 
 Natural in the presence of adverse selection, where the marginal patient is almost always different from the average patient
 
+
 ---
-# Solution to sub-optimal quality
+# The main idea
+
+- Need some form of quality disclosure to aid decision making
+- Full-disclosure likely yields under-investment in quality
+
+--
 
 - Regulator can improve quality via coarse rating scores
+- but...firms will respond to the scoring design accordingly
 
 
 ---
-# Quality Disclosure
+class: inverse, center, middle
 
-- Self-disclosed quality via advertising
-- Word-of-mouth and aggregated reviews form users (Google, Rotten Tomatoes, etc.)
-- Third-party rating agencies
-- Government regulation via mandated disclosure or licensing
+# Context
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=1055px></html>
+
+---
+# Medicare Advantage
+
+.pull-left[
+  ![](images/mma-kff-2020.png)
+]
+
+.pull-right[
+  ![](images/mma-kff-plantype.png)
+]
+
+---
+# Quality disclosure in Medicare Advantage
+
+snapshots of online plan finder
 
 
 ---
-# Mandated Disclosure
+class: inverse, center, middle
 
-- 
+# Preview of findings
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=1055px></html>
 
 ---
-# Setup
+class: clear
+
+1. Estimate structural model of price **and quality investments**
+2. Identify optimal scoring design
+
+--
+
+figure showing final result
+
+
+---
+# Some points of applause
+
+- Substantial contribution here
+- Highly policy relevant
+
+--
+
+"To address this, I completed the data by reviewing a decade of public communications by CMS aimed at insurers. I recover year-to-year changes to the scoring design, **replicating the public scoring assignment perfectly.**"
+
+
+---
+class: inverse, center, middle
+
+# Basic setup
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=1055px></html>
+
+
+---
+class: clear
+
 ```{tikz tikz-timeline, echo=FALSE, fig.ext='png', cache=TRUE}
 \begin{tikzpicture}[scale=1]
 		% time line
@@ -146,7 +218,8 @@ Natural in the presence of adverse selection, where the marginal patient is almo
 ```
 
 ---
-# Setup
+class: clear
+
 ```{tikz tikz-new, echo=FALSE, fig.ext='png', cache=TRUE}
 \begin{tikzpicture}[scale=1]
 		% time line
@@ -192,7 +265,7 @@ Natural in the presence of adverse selection, where the marginal patient is almo
 
 
 ---
-# Setup (Stage 4)
+class: clear
 
 ```{tikz tikz-4, echo=FALSE, fig.ext='png', cache=TRUE}
 \begin{tikzpicture}[scale=1]
@@ -237,7 +310,8 @@ $$u_{ij} = \underbrace{\alpha_i P_{j}}_{\text{premium}} + \underbrace{\beta_i b_
 
 
 ---
-# Setup (Stage 3)
+class: clear
+
 ```{tikz tikz-3, echo=FALSE, fig.ext='png', cache=TRUE}
 \begin{tikzpicture}[scale=1]
 		% time line
@@ -280,7 +354,8 @@ $$u_{ij} = \underbrace{\alpha_i P_{j}}_{\text{premium}} + \underbrace{\beta_i b_
 $$\pi_{f}(\boldsymbol{q}, \psi) = \max_{\{p_j\}_{j \in J_{f}}} \sum_{j \in J_{f}}\underbrace{D_{j}(\boldsymbol{p}, \psi(\boldsymbol{q}))}_{\text{demand}} (\underbrace{R_j(p_j)}_{\text{mg. revenue}} - \underbrace{C(\boldsymbol{q}_j, \boldsymbol{z}_{j}, \boldsymbol{\theta}_j)}_{\text{mg. cost}})$$
 
 ---
-# Setup (Stage 2)
+class: clear
+
 ```{tikz tikz-2, echo=FALSE, fig.ext='png', cache=TRUE}
 \begin{tikzpicture}[scale=1]
 		% time line
@@ -325,7 +400,8 @@ $$\max_{\boldsymbol{x}_f \in \mathbb{R}^{|\mathcal{Q}| \times |J_f|}}  \underbra
 
 
 ---
-# Setup (Stage 1)
+class: clear
+
 ```{tikz tikz-1, echo=FALSE, fig.ext='png', cache=TRUE}
 \begin{tikzpicture}[scale=1]
 		% time line
@@ -369,15 +445,49 @@ $$\max_{\boldsymbol{x}_f \in \mathbb{R}^{|\mathcal{Q}| \times |J_f|}}  \underbra
 - Once set, scoring design is known to insurers and beneficiaries
 
 ---
-# Comment on Information
+class: inverse, center, middle
+
+# Some thoughts on the setup
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=1055px></html>
+
+
+---
+# Who knows what?
 
 - Insurers are probably sufficiently aware of scoring design...are beneficiaries?
 
 
 ---
-# Comment on Scoring Design
+# The bid process
 
-- Some complicating factors in current design:
-    - Penalty for high-variance contracts
-    - Part D
-    - Bonuses for high scores
+.center[
+  ![:scale 57%](images/mma-bids.png)
+]
+
+--
+
+Separate bids for Part D benefits
+
+---
+# Scoring design
+
+Does the setup incorporate...
+
+- Bonuses for high scores? **No**
+- Contract consolidation of plans? **No**
+- Penalty for high-variance contracts? **Maybe**
+
+
+---
+# Scoring design
+
+More fundamental questions...
+
+- Are ratings reflective of quality?
+- Is the rating monotonically increasing in underlying quality?
+
+---
+class: clear
+
+Results from Panel C of Table 1...quality measures within the control of the insurer are valued the least.
