@@ -153,13 +153,19 @@ class: clear
 
 --
 
-figure showing final result
+.pull-left[
+loss of CS due to bunching?
+]
+
+.pull-right[
+gain to total welfare with new scoring design
+]
 
 
 ---
 # Some points of applause
 
-- Substantial contribution here
+- Substantial contribution
 - Highly policy relevant
 
 --
@@ -170,7 +176,7 @@ figure showing final result
 ---
 class: inverse, center, middle
 
-# Basic setup
+# Setup and estimation
 
 <html><div style='float:left'></div><hr color='#EB811B' size=1px width=1055px></html>
 
@@ -310,6 +316,32 @@ $$u_{ij} = \underbrace{\alpha_i P_{j}}_{\text{premium}} + \underbrace{\beta_i b_
 
 
 ---
+# Demand estimation
+
+$$u_{ij} = \underbrace{\alpha_i P_{j}}_{\text{premium}} + \underbrace{\beta_i b_{j}}_{\text{coverage}} + \underbrace{\mathcal{E}_{\psi}[\boldsymbol{\gamma}'\boldsymbol{q}|\psi(q_{j})]}_{\text{quality}}  + \underbrace{\lambda'z_{ij}}_{\substack{\text{Obs.}\\\text{attributes}}} + \underbrace{\xi_{j}}_{\substack{\text{unobs.}\\\text{preferences}}} + \underbrace{\varepsilon_{ij}}_{\sim \text{T1EV}}$$
+
+--
+
+Two-step process:
+1. Estimate mean preferences, $\hat{\delta}_{j}$, from $u_{ij} = \color{red}{\delta_{j}} + \xi_{j} + \varepsilon_{ij}$, 
+2. TSLS regression of $\hat{\delta}_{j}$ on observable characteristics and fixed effects.
+3 (if needed). Estimate preference for quality by minimizing the square difference between a contract fixed effect and expected quality, $\eta_{j} - \boldsymbol{\gamma} \mathcal{E}[\boldsymbol{q} | r, \psi]$, across time periods (pairwise time period differences). 
+
+
+---
+# Question/concern
+
+Estimating preferences for quality...
+- within an estimated fixed effect, $\hat{\eta}$...
+- within an estimated mean preference, $\hat{\delta}$
+
+--
+
+- What does the distribution of these fixed effects look like?
+- How much variation exists in **within-contract** quality (or expected quality) over time?
+
+
+---
 class: clear
 
 ```{tikz tikz-3, echo=FALSE, fig.ext='png', cache=TRUE}
@@ -352,6 +384,18 @@ class: clear
 ```
 
 $$\pi_{f}(\boldsymbol{q}, \psi) = \max_{\{p_j\}_{j \in J_{f}}} \sum_{j \in J_{f}}\underbrace{D_{j}(\boldsymbol{p}, \psi(\boldsymbol{q}))}_{\text{demand}} (\underbrace{R_j(p_j)}_{\text{mg. revenue}} - \underbrace{C(\boldsymbol{q}_j, \boldsymbol{z}_{j}, \boldsymbol{\theta}_j)}_{\text{mg. cost}})$$
+
+---
+# Pricing (insurance costs) estimation
+
+$$\pi_{f}(\boldsymbol{q}, \psi) = \max_{\{p_j\}_{j \in J_{f}}} \sum_{j \in J_{f}}\underbrace{D_{j}(\boldsymbol{p}, \psi(\boldsymbol{q}))}_{\text{demand}} (\underbrace{R_j(p_j)}_{\text{mg. revenue}} - \underbrace{C(\boldsymbol{q}_j, \boldsymbol{z}_{j}, \boldsymbol{\theta}_j)}_{\text{mg. cost}})$$
+
+--
+
+- Profit maximization yields standard $MR=MC$ expression
+- Recover marginal costs
+- Decompose marginal costs into part due to quality, other observable components, and residual, $$MC=\boldsymbol{\theta}^{c}_{q}\boldsymbol{q} + \boldsymbol{\theta}_{a}^{c}\boldsymbol{a} + c$$
+
 
 ---
 class: clear
@@ -400,6 +444,21 @@ $$\max_{\boldsymbol{x}_f \in \mathbb{R}^{|\mathcal{Q}| \times |J_f|}}  \underbra
 
 
 ---
+# Quality (investment costs) estimation
+
+$$\max_{\boldsymbol{x}_f \in \mathbb{R}^{|\mathcal{Q}| \times |J_f|}}  \underbrace{\int  E\left[\pi_{f}(\boldsymbol{q}_f, \boldsymbol{q}_{-f}, \psi)\right] dF(\boldsymbol{q}_f|\boldsymbol{x}_f)}_{\text{expected insurance profit}} - \underbrace{I(\boldsymbol{x}_f, \boldsymbol{\mu}_{\boldsymbol{f}})}_{\text{investment cost}}$$
+
+- Equate marginal revenue from quality investment with marginal investment cost
+- Assume investment costs are quadratic and **separable across products and categories**
+
+---
+# Question/concern
+
+- Costs almost surely are **not** separable across categories
+- Investment in network changes access, outcomes, patient surveys
+- Investment for one contract likely spills over into other contracts for same insurer
+
+---
 class: clear
 
 ```{tikz tikz-1, echo=FALSE, fig.ext='png', cache=TRUE}
@@ -441,8 +500,32 @@ class: clear
 \end{tikzpicture}
 ```
 
-- No objective function imposed on regulator
-- Once set, scoring design is known to insurers and beneficiaries
+- Equation 15 in text
+
+
+
+---
+class: inverse, center, middle
+
+# Main results
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=1055px></html>
+
+
+---
+# Demand
+
+.center[
+  ![:scale 57%](images/quality_value_coeffs.pdf)
+]
+
+---
+# Supply
+
+
+---
+# Scoring design
+
 
 ---
 class: inverse, center, middle
@@ -524,6 +607,7 @@ class: inverse, center, middle
 
 - What's the best way to measure the underlying quality score?
 - Many of the current measures are provider (network) specific
+- Relates to the *aggregator* in current framework, but would not take current categories (or construction of current categories) as given
 
 ---
 # 2. Policy uncertainty
