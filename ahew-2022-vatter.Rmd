@@ -82,16 +82,7 @@ xaringanExtra::use_scribble(rgb(0.9, 0.5, 0.5))
 
 
 ---
-# 1. Types of quality disclosure
-
-- Self-disclosed quality via advertising
-- Word-of-mouth and aggregated reviews form users (Google, Rotten Tomatoes, etc.)
-- Third-party rating agencies
-- **Government regulation via mandated disclosure or licensing**
-
-
----
-# 2. Endogenous quality (Spence, 1975)
+# 1. Endogenous quality (Spence, 1975)
 
 - **Setting:** Monopoly (or oligopoly) when firms set both price and quality
 - **Intuition:** Firm invests to the point where marginal quality valuation meets marginal costs of quality, but socially optimal quality depends on average valuation
@@ -103,13 +94,22 @@ Natural in the presence of adverse selection, where the marginal patient is almo
 
 
 ---
+# 2. Types of quality disclosure
+
+- Self-disclosed quality via advertising
+- Word-of-mouth and aggregated reviews form users (Google, Rotten Tomatoes, etc.)
+- Third-party rating agencies
+- **Government regulation via mandated disclosure or licensing**
+
+
+
+---
 # The main idea
 
 - Need some form of quality disclosure to aid decision making
 - Full-disclosure likely yields under-investment in quality
 
 --
-
 - Regulator can improve quality via coarse rating scores
 - but...firms will respond to the scoring design accordingly
 
@@ -133,9 +133,76 @@ class: inverse, center, middle
 ]
 
 ---
-# Quality disclosure in Medicare Advantage
+# Selecting an MA plan
 
-snapshots of online plan finder
+When someone nears 65, they'll receive:
+
+- Medicare & You Booklet (128 pages in 2022)
+- Points beneficiary to Medicare's online plan finder tool
+- **Lots** of other marketing materials touting different types of plans
+    - Standalone Part D plans
+    - Medicare supplemental plans
+    - Medicare Advantage plans
+- Assume someone has decided to search for an MA plan online
+
+---
+class: clear
+
+.center[
+ ![:scale 80%](images/PlanSearch_Step1.png)
+]
+
+---
+class: clear
+
+.center[
+ ![](images/PlanSearch_Step2.png)
+]
+
+---
+class: clear
+
+.center[
+ ![](images/PlanSearch_Step3.png)
+]
+
+---
+class: clear
+
+.center[
+ ![](images/PlanSearch_Step4.png)
+]
+
+---
+class: clear
+
+.center[
+ ![](images/PlanSearch_Step5.png)
+]
+
+
+
+---
+class: clear
+
+.center[
+ ![:scale 75%](images/PlanSearch_Step6.png)
+]
+
+---
+class: clear
+
+.center[
+ ![:scale 65%](images/MedicarePlanFinder_37920_Knox.png)
+]
+
+
+---
+class: clear
+
+.center[
+ ![](images/StarRatings.png)
+]
 
 
 ---
@@ -154,18 +221,18 @@ class: clear
 --
 
 .pull-left[
-loss of CS due to bunching?
+  ![](images/best_linear_substitute_aggregator_paper-1.png)
 ]
 
 .pull-right[
-gain to total welfare with new scoring design
+  ![](images/best_substitute_eqm_unpacking_custom_levels_4-1.png)
 ]
 
 
 ---
 # Some points of applause
 
-- Substantial contribution
+- Substantial contribution, both theoretical and empirical
 - Highly policy relevant
 
 --
@@ -332,11 +399,10 @@ Two-step process:
 # Question/concern
 
 Estimating preferences for quality...
-- within an estimated fixed effect, $\hat{\eta}$...
+- within an estimated fixed effect, $\hat{\eta}$
 - within an estimated mean preference, $\hat{\delta}$
 
 --
-
 - What does the distribution of these fixed effects look like?
 - How much variation exists in **within-contract** quality (or expected quality) over time?
 
@@ -503,9 +569,14 @@ class: clear
 
 $$\max_{\psi \in \Psi} E_{\boldsymbol{q}}[\underbrace{CS(\psi, \boldsymbol{q})}_{\substack{\text{Consumer}\\\text{surplus}}} + \rho^{F}\underbrace{\sum_{f}V_f(\psi, \boldsymbol{q}) -  I(\boldsymbol{x}_f^*(\psi), \mu_f)}_{\substack{\text{Insurer}\\\text{profit}}} - \rho^{G}\underbrace{Gov(\psi, \boldsymbol{q})}_{\substack{\text{Government}\\\text{spending}}} \vert \boldsymbol{x}^*(\psi)]$$
 
+---
+# Scoring design estimation
+
+$$\max_{\psi \in \Psi} E_{\boldsymbol{q}}[\underbrace{CS(\psi, \boldsymbol{q})}_{\substack{\text{Consumer}\\\text{surplus}}} + \rho^{F}\underbrace{\sum_{f}V_f(\psi, \boldsymbol{q}) -  I(\boldsymbol{x}_f^*(\psi), \mu_f)}_{\substack{\text{Insurer}\\\text{profit}}} - \rho^{G}\underbrace{Gov(\psi, \boldsymbol{q})}_{\substack{\text{Government}\\\text{spending}}} \vert \boldsymbol{x}^*(\psi)]$$
+
 - Designer chooses scoring rule, $\psi$, from class of rules, $\boldsymbol{\Psi}$
 - Trades off information for efficiency
-- Paper shows that any monotone partial score reduces to two elements: an aggregator and a cutoff function
+- Paper shows that any monotone partitional score reduces to two elements: an aggregator and a cutoff function
 - Considers optimal design among the set of designs with no more than 15 partitions and quadratic aggregators, setting $\rho^{F}=1$ and $\rho^{G}=0$, for year 2015
 
 
@@ -514,7 +585,7 @@ $$\max_{\psi \in \Psi} E_{\boldsymbol{q}}[\underbrace{CS(\psi, \boldsymbol{q})}_
 
 - Do optimal cutoffs and aggregator change in different years?
 - With different $\rho^{F}$ and $\rho^{G}$?
-- No firm response to quality bonuses, but costs should be in $\rho^{G}$
+- No firm response to quality bonuses, but costs to CMS could be in $\rho^{G}$
 
 
 ---
@@ -529,23 +600,31 @@ class: inverse, center, middle
 # Demand
 
 .center[
-  ![:scale 57%](images/quality_value_coeffs.pdf)
-]
+  ![:scale 75%](images/quality_value_coeffs-1.png)
+  ]
+
 
 ---
 # Supply
 
+| Category      | Insurance Costs, $\theta_{q}$     | Investment Costs, $\mu_{k}$ |
+| ------------- | ---------------------------------:| ---------------------------:|
+| Access        | 31.16                             | 15.620***                   |
+| Intermediate  | 108.40***                         | 19.530***                   |
+| Outcome       | 16.810***                         | 15.000***                   |
+| Patient       | -244.30***                        | 14.730***                   |
+| Process       | -175.60***                        | 1.106                       |
 
 
 ---
 # Scoring design
 
 .pull-left[
-  ![:scale 57%](images/best_linear_substitute_aggregator_paper.pdf)
+  ![:scale 80%](images/best_linear_substitute_aggregator_paper-1.png)
 ]
 
 .pull-right[
-  ![:scale 57%](images/best_linear_replacement_cutoff_placement_paper.pdf)
+  ![:scale 80%](images/best_linear_replacement_cutoff_placement_paper-1.png)
 ]
 
 
@@ -564,7 +643,7 @@ class: inverse, center, middle
 # Welfare
 
 .center[
-  ![:scale 57%](images/best_substitute_eqm_unpacking_custom_levels_0.pdf)
+  ![:scale 57%](images/best_substitute_eqm_unpacking_custom_levels_0-1.png)
 ]
 
 
@@ -572,7 +651,7 @@ class: inverse, center, middle
 # Welfare
 
 .center[
-  ![:scale 57%](images/best_substitute_eqm_unpacking_custom_levels_1.pdf)
+  ![:scale 57%](images/best_substitute_eqm_unpacking_custom_levels_1-1.png)
 ]
 
 
@@ -580,7 +659,7 @@ class: inverse, center, middle
 # Welfare
 
 .center[
-  ![:scale 57%](images/best_substitute_eqm_unpacking_custom_levels_2.pdf)
+  ![:scale 57%](images/best_substitute_eqm_unpacking_custom_levels_2-1.png)
 ]
 
 
@@ -588,7 +667,7 @@ class: inverse, center, middle
 # Welfare
 
 .center[
-  ![:scale 57%](images/best_substitute_eqm_unpacking_custom_levels_3.pdf)
+  ![:scale 57%](images/best_substitute_eqm_unpacking_custom_levels_3-1.png)
 ]
 
 
@@ -596,7 +675,7 @@ class: inverse, center, middle
 # Welfare
 
 .center[
-  ![:scale 57%](images/best_substitute_eqm_unpacking_custom_levels_4.pdf)
+  ![:scale 57%](images/best_substitute_eqm_unpacking_custom_levels_4-1.png)
 ]
 
 
@@ -613,13 +692,16 @@ class: inverse, center, middle
 ---
 # The bid process
 
-.center[
-  ![:scale 57%](images/mma-bids.png)
+.pull-left[
+  ![:scale 75%](images/mma-bids.png)
 ]
 
---
+.pull-right[
+- Not just setting price
+- Separate Part D bid process
+- Ability to use Part C rebate to go toward Part D premium
+]
 
-Separate bids for Part D benefits
 
 ---
 # Contracts vs plans
@@ -628,7 +710,6 @@ Separate bids for Part D benefits
 - Quality is measured by contract
 
 --
-
 - Paper argues that there is really only one plan per contract
     - Makes sense in recent years but maybe not in early years
 - Can't have it both ways
@@ -638,12 +719,13 @@ Separate bids for Part D benefits
 ---
 # Scoring design
 
-Does the setup incorporate...
+Does (should) the setup incorporate...
 
 - Bonuses for high scores? **No**
 - Contract consolidation of plans? **No**
-- Penalty for high-variance contracts? **Maybe**
-- Alert for ratings below 3 stars? **Maybe**
+- Part D quality? **No**
+- Penalty for high-variance contracts (i-factor)? **Maybe**
+- Alert for ratings below 3 stars or at 5 stars? **Maybe**
 
 
 ---
@@ -651,15 +733,13 @@ Does the setup incorporate...
 
 More fundamental questions...
 
-- Are ratings reflective of quality?
+- Are ratings reflective of quality? How do we define a "good" health insurance plan?
 - Is the rating monotonically increasing in underlying quality?
 
----
-class: clear
-
+--
 
 .center[
-  ![:scale 57%](images/quality_value_coeffs.pdf)
+  ![:scale 50%](images/quality_value_coeffs-1.png)
 ]
 
 
@@ -686,7 +766,6 @@ class: inverse, center, middle
 - How do insurers respond to such uncertainty?
 
 --
-
 - Already in the model: mapping between quality investments and the quality score
 - Already in the data: introduction of new measures and publication of specific threshold values for some measures
 
@@ -695,3 +774,18 @@ class: inverse, center, middle
 
 - The scoring designs are complicated
 - Likely takes time for insurers to understand the policy and update plans/contracts accordingly
+
+
+---
+class: inverse, center, middle
+
+# Final thoughts
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=1055px></html>
+
+
+---
+class: clear, center
+
+![:scale 75%](https://media.giphy.com/media/fg9c6gu2NwyWs/giphy.gif)
+
