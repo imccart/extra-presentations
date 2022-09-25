@@ -2,7 +2,7 @@
 title: "Quality Disclosure and Regulation"
 subtitle: "Scoring Design in Medicare Advantage"
 author: 
-- "**Author:** Benjamin Vatter, Stanford University"
+- "**Author:** Benjamin Vatter, Stanford University (MIT upcoming)"
 - "**Discussant:** Ian McCarthy, Emory University and NBER"
 date: "AHEW, October 1, 2022"
 header-includes: 
