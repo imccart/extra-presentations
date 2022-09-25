@@ -447,7 +447,7 @@ class: clear
 ---
 class: inverse, center, middle
 
-# Some thoughts on the setup
+# Considerations for this paper
 
 <html><div style='float:left'></div><hr color='#EB811B' size=1px width=1055px></html>
 
@@ -470,6 +470,21 @@ class: inverse, center, middle
 Separate bids for Part D benefits
 
 ---
+# Contracts vs plans
+
+- Beneficiaries choose plans, defined by specific premium and benefits
+- Quality is measured by contract
+
+--
+
+- Paper argues that there is really only one plan per contract
+    - Makes sense in recent years but maybe not in early years
+    - Is this true in all years?
+- Can't have it both ways
+    - Price variation within contract good
+    - but product differentiation within given quality score irrelevant?
+
+---
 # Scoring design
 
 Does the setup incorporate...
@@ -490,4 +505,40 @@ More fundamental questions...
 ---
 class: clear
 
-Results from Panel C of Table 1...quality measures within the control of the insurer are valued the least.
+
+.center[
+  ![:scale 57%](images/quality_value_coeffs.pdf)
+]
+
+
+---
+class: inverse, center, middle
+
+# Considerations for more papers
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=1055px></html>
+
+
+---
+# 1. Measuring quality
+
+- What's the best way to measure the underlying quality score?
+- Many of the current measures are provider (network) specific
+
+---
+# 2. Policy uncertainty
+
+- Can some policy uncertainty avoid bunching just above the threshold values?
+- How much policy uncertainty is optimal?
+- How do insurers respond to such uncertainty?
+
+--
+
+- Already in the model: mapping between quality investments and the quality score
+- Already in the data: introduction of new measures and publication of specific threshold values for some measures
+
+---
+# 3. Learning about scoring designs
+
+- The scoring designs are complicated
+- Likely takes time for insurers to understand the policy and update plans/contracts accordingly
