@@ -457,6 +457,7 @@ $$\max_{\boldsymbol{x}_f \in \mathbb{R}^{|\mathcal{Q}| \times |J_f|}}  \underbra
 - Costs almost surely are **not** separable across categories
 - Investment in network changes access, outcomes, patient surveys
 - Investment for one contract likely spills over into other contracts for same insurer
+- How much does this matter?
 
 ---
 class: clear
@@ -500,8 +501,20 @@ class: clear
 \end{tikzpicture}
 ```
 
-- Equation 15 in text
+$$\max_{\psi \in \Psi} E_{\boldsymbol{q}}[\underbrace{CS(\psi, \boldsymbol{q})}_{\substack{\text{Consumer}\\\text{surplus}}} + \rho^{F}\underbrace{\sum_{f}V_f(\psi, \boldsymbol{q}) -  I(\boldsymbol{x}_f^*(\psi), \mu_f)}_{\substack{\text{Insurer}\\\text{profit}}} - \rho^{G}\underbrace{Gov(\psi, \boldsymbol{q})}_{\substack{\text{Government}\\\text{spending}}} \vert \boldsymbol{x}^*(\psi)]$$
 
+- Designer chooses scoring rule, $\psi$, from class of rules, $\boldsymbol{\Psi}$
+- Trades off information for efficiency
+- Paper shows that any monotone partial score reduces to two elements: an aggregator and a cutoff function
+- Considers optimal design among the set of designs with no more than 15 partitions and quadratic aggregators, setting $\rho^{F}=1$ and $\rho^{G}=0$, for year 2015
+
+
+---
+# Question/concern
+
+- Do optimal cutoffs and aggregator change in different years?
+- With different $\rho^{F}$ and $\rho^{G}$?
+- No firm response to quality bonuses, but costs should be in $\rho^{G}$
 
 
 ---
@@ -523,8 +536,68 @@ class: inverse, center, middle
 # Supply
 
 
+
 ---
 # Scoring design
+
+.pull-left[
+  ![:scale 57%](images/best_linear_substitute_aggregator_paper.pdf)
+]
+
+.pull-right[
+  ![:scale 57%](images/best_linear_replacement_cutoff_placement_paper.pdf)
+]
+
+
+- Optimal design involves linear aggregator among 5 partitions
+- Pooling at the bottom, with very little demand for low-quality plans
+- Closely matches consumer WTP (except for Intermediate category?)
+- **Question:** How much is 3.5 vs 3.6 just noise?
+
+---
+# Scoring design with uninformed beneficiaries
+
+
+
+
+---
+# Welfare
+
+.center[
+  ![:scale 57%](images/best_substitute_eqm_unpacking_custom_levels_0.pdf)
+]
+
+
+---
+# Welfare
+
+.center[
+  ![:scale 57%](images/best_substitute_eqm_unpacking_custom_levels_1.pdf)
+]
+
+
+---
+# Welfare
+
+.center[
+  ![:scale 57%](images/best_substitute_eqm_unpacking_custom_levels_2.pdf)
+]
+
+
+---
+# Welfare
+
+.center[
+  ![:scale 57%](images/best_substitute_eqm_unpacking_custom_levels_3.pdf)
+]
+
+
+---
+# Welfare
+
+.center[
+  ![:scale 57%](images/best_substitute_eqm_unpacking_custom_levels_4.pdf)
+]
 
 
 ---
@@ -532,13 +605,9 @@ class: inverse, center, middle
 
 # Considerations for this paper
 
+(not necessarily actionable)
+
 <html><div style='float:left'></div><hr color='#EB811B' size=1px width=1055px></html>
-
-
----
-# Who knows what?
-
-- Insurers are probably sufficiently aware of scoring design...are beneficiaries?
 
 
 ---
@@ -562,7 +631,6 @@ Separate bids for Part D benefits
 
 - Paper argues that there is really only one plan per contract
     - Makes sense in recent years but maybe not in early years
-    - Is this true in all years?
 - Can't have it both ways
     - Price variation within contract good
     - but product differentiation within given quality score irrelevant?
@@ -575,6 +643,7 @@ Does the setup incorporate...
 - Bonuses for high scores? **No**
 - Contract consolidation of plans? **No**
 - Penalty for high-variance contracts? **Maybe**
+- Alert for ratings below 3 stars? **Maybe**
 
 
 ---
