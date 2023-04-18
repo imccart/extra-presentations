@@ -1,0 +1,22 @@
+---
+title: "Dying or Lying? For-Profit Hospices and End of Life Care"
+subtitle: "Discussion by Ian McCarthy, Emory University"
+author: "AHEC 2023"
+format: 
+  revealjs:
+    theme: [moon]
+    preview-links: auto
+    chalkboard:
+      boardmarker-width: 5
+#    embed-resources: true
+from: markdown+emoji
+execute: 
+  echo: true
+---
+
+```{r}
+#| include: false
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse, ggplot2, lubridate, scales, hrbrthemes)
+```
+
