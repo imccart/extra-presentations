@@ -11,12 +11,72 @@ format:
 #    embed-resources: true
 from: markdown+emoji
 execute: 
-  echo: true
+  echo: false
 ---
 
 ```{r}
 #| include: false
 if (!require("pacman")) install.packages("pacman")
-pacman::p_load(tidyverse, ggplot2, lubridate, scales, hrbrthemes)
+pacman::p_load(tidyverse, ggplot2, lubridate, scales, hrbrthemes, gdata)
 ```
 
+```{r}
+#| fig-align: center
+pos.term <- read_tsv('data/input/pos-data-combined.txt') %>%
+  filter(category=="Hospice", !is.na(term_date)) %>%
+  group_by(provider) %>%
+  mutate(year_term=year(term_date)) %>%
+  summarize(min_term=min(year_term, na.rm=TRUE),
+            max_own_change=max(own_change_count, na.rm=TRUE))
+
+pos.data <- read_tsv('data/input/pos-data-combined.txt') %>%
+  left_join(pos.term, by="provider") %>%
+  group_by(year, profit_status) %>%
+  filter(category=="Hospice", year>=1990, !is.na(profit_status)) %>% 
+  filter(year<min_term | is.na(min_term)) %>%
+  summarize(hospice_count=n())
+
+pos.data %>% 
+  ggplot(aes(x=year, y=hospice_count, group=profit_status)) + 
+  geom_line() + geom_point() + theme_bw() +
+  geom_text(data = pos.data %>% filter(year==2019), 
+            aes(label = c("For profit", "Government", "Not for profit"),
+                x = year + 1,
+                y = hospice_count-300)) +
+  scale_y_continuous(labels = comma) +
+  scale_x_continuous(breaks=seq(1990, 2020, 1)) +
+  theme(axis.text.x = element_text(angle = 70, hjust=1)) +
+  guides(linetype="none") +
+  labs(
+    x="Year",
+    y="Count of Hospices"
+  )
+```
+
+---
+
+```{r}
+#| fig-align: center
+chow.data <- read_tsv('data/input/pos-data-combined.txt') %>%
+  left_join(pos.term, by="provider") %>%
+  group_by(year, profit_status) %>%
+  filter(category=="Hospice", year>=1990, !is.na(profit_status), max_own_change>0) %>% 
+  filter(year<min_term | is.na(min_term)) %>%
+  summarize(hospice_count=n())
+
+chow.data %>% 
+  ggplot(aes(x=year, y=hospice_count, group=profit_status)) + 
+  geom_line() + geom_point() + theme_bw() +
+  geom_text(data = chow.data %>% filter(year==2012), 
+            aes(label = c("For profit", "Government", "Not for profit"),
+                x = year -1,
+                y = hospice_count-5)) +
+  scale_y_continuous(labels = comma, breaks=seq(0,200,50)) +
+  scale_x_continuous(breaks=seq(1990, 2021, 1)) +
+  theme(axis.text.x = element_text(angle = 70, hjust=1)) +
+  guides(linetype="none") +
+  labs(
+    x="Year",
+    y="Count of Hospices"
+  )
+```
