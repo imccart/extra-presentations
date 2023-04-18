@@ -18,4 +18,5 @@ This repo just collects a few additional presentations outside of any specific r
 -   [ASHEcon, June 2022, Hou 2022](ashecon-2022-hou.html) Slides for discussion of *Peer Participation in the Medicare Shared Savings Program* presented by Youcheng Hou
 -   [ASHEcon, June 2022, Stecher 2022](ashecon-2022-stecher.html) Slides for discussion of *Reducing Racial Disparities through Experience: Evidence from Medical Device Choice in Cardiac Catherization Labs* presented by Chad Stecher
 -   [AHEW, October 2022, Vatter 2022](ahew-2022-vatter.html) Slides for discussion of *Quality Disclosure and Regulation: Scoring Design in Medicare Advantage* by Benjamin Vatter
+-   [AHEC, April 2023, Leder-Luis 2023](ahec-2023-lederluis.html) Slides for discussion of *Dying or Lying? For-Profit Hospices and End of Life Care* presented by Jetson Leder-Luis
 
