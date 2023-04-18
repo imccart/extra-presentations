@@ -1,6 +1,6 @@
 # Extra Presentations
 
-This repo just collects a few additional presentations outside of any specific research projects. Some of these are general "background" presentations about myself or my research for different audiences, and some are brief discussant slides for different conferences or seminars. Just click on the link to each presentation for more info.
+This repo just collects a few additional presentations outside of any specific research projects. Some of these are general "background" presentations about myself or my research for different audiences, and some are brief discussant slides for different conferences or seminars. Just click on the link to each presentation for more info. Note that if you're viewing this on GitHub, the links will take you to the raw html code. If you want to see the rendered slides, you'll need to view the slides [here](extras.talks.ianmccarthyecon.com).
 
 ## Background Presentations
 
