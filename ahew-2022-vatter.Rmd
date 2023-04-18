@@ -381,6 +381,7 @@ class: clear
 
 $$u_{ij} = \underbrace{\alpha_i P_{j}}_{\text{premium}} + \underbrace{\beta_i b_{j}}_{\text{coverage}} + \underbrace{\mathcal{E}_{\psi}[\boldsymbol{\gamma}'\boldsymbol{q}|\psi(q_{j})]}_{\text{quality}}  + \underbrace{\lambda'z_{ij}}_{\substack{\text{Obs.}\\\text{attributes}}} + \underbrace{\xi_{j}}_{\substack{\text{unobs.}\\\text{preferences}}} + \underbrace{\varepsilon_{ij}}_{\sim \text{T1EV}}$$
 
+Note: when you see $j$, think $jmt$
 
 ---
 # Demand estimation
@@ -389,10 +390,12 @@ $$u_{ij} = \underbrace{\alpha_i P_{j}}_{\text{premium}} + \underbrace{\beta_i b_
 
 --
 
-Two-step process:
-1. Estimate mean preferences, $\hat{\delta}_{j}$, from $u_{ij} = \color{red}{\delta_{j}} + \xi_{j} + \varepsilon_{ij}$, 
+Two(three)-step process:
+1. Estimate mean preferences, $\hat{\delta}_{j}$, from $u_{ij} = \color{red}{\delta_{j}} + \color{blue}{\kappa_{ij}} + \varepsilon_{ij}$
+
 2. TSLS regression of $\hat{\delta}_{j}$ on observable characteristics and fixed effects.
-3 (if needed). Estimate preference for quality by minimizing the square difference between a contract fixed effect and expected quality, $\eta_{j} - \boldsymbol{\gamma} \mathcal{E}[\boldsymbol{q} | r, \psi]$, across time periods (pairwise time period differences). 
+
+3. (if needed) Estimate preference for quality by minimizing the square difference between a contract fixed effect and expected quality, $\eta_{j} - \boldsymbol{\gamma} \mathcal{E}[\boldsymbol{q} | r, \psi]$, across time periods (pairwise time period differences). 
 
 
 ---
