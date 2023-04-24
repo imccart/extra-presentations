@@ -1,7 +1,7 @@
 ---
 title: "Dying or Lying? For-Profit Hospices and End of Life Care"
 author: "Presenter: Jetson Leder-Luis, Boston University\n Discussant: Ian McCarthy, Emory University and NBER"
-institute: "AHEC, April 29, 2023"
+institute: "AHEC, April 28, 2023"
 format: 
   revealjs:
     theme: [simple, quarto-styles.scss]
