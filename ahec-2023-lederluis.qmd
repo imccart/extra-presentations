@@ -1,13 +1,14 @@
 ---
 title: "Dying or Lying? For-Profit Hospices and End of Life Care"
-subtitle: "Discussion by Ian McCarthy, Emory University"
-author: "AHEC 2023"
+author: "Presenter: Jetson Leder-Luis, Boston University\n Discussant: Ian McCarthy, Emory University and NBER"
+institute: "AHEC, April 29, 2023"
 format: 
   revealjs:
-    theme: [moon]
+    theme: [simple, quarto-styles.scss]
     preview-links: auto
     chalkboard:
       boardmarker-width: 5
+    slide-number: true
 #    embed-resources: true
 from: markdown+emoji
 execute: 
@@ -17,8 +18,38 @@ execute:
 ```{r}
 #| include: false
 if (!require("pacman")) install.packages("pacman")
-pacman::p_load(tidyverse, ggplot2, lubridate, scales, hrbrthemes, gdata)
+pacman::p_load(tidyverse, ggplot2, lubridate, scales, hrbrthemes, gdata, ggforce, gganimate)
 ```
+
+---
+
+## Background {.section-divider}
+
+
+---
+
+### What is hospice?
+
+::: {.callout-note appearance="minimal"}
+
+## National Cancer Institute Definition
+"A program that gives special care to people who are near the end of life and have **stopped treatment to cure or control their disease**...The main goal of hospice care is to **control pain and other symptoms of illness** so patients can be as comfortable and alert as possible. It is **usually given at home**, but may also be given in a hospice center, hospital, or nursing home." *emphasis added*
+
+:::
+
+---
+
+### Hospice spending
+
+![](images/hospice-spending.jpeg)
+
+::: aside
+**Source:** Hargraves and Brennan, 2016, Health Affairs
+:::
+
+---
+
+### Growth of for-profit hospices
 
 ```{r}
 #| fig-align: center
@@ -44,7 +75,7 @@ pos.data %>%
                 x = year + 1,
                 y = hospice_count-300)) +
   scale_y_continuous(labels = comma) +
-  scale_x_continuous(breaks=seq(1990, 2020, 1)) +
+  scale_x_continuous(breaks=seq(1990, 2021, 1)) +
   theme(axis.text.x = element_text(angle = 70, hjust=1)) +
   guides(linetype="none") +
   labs(
@@ -53,7 +84,187 @@ pos.data %>%
   )
 ```
 
+
+::: aside
+**Source:** Calculations from Medicare Provider of Services Files. Count of hospices by ownership type among active organizations.
+:::
+
 ---
+
+### Malleable admission criteria
+
+- Eligibility: Life expectancy < 6 months
+- Over 20% live beyond 6 months
+- Nearly 30% among FP hospice
+- Half of ADRD hospice patients live beyond 6 months
+
+---
+
+
+![](images/fp-hospice-adrd.png){fig-align="center"}
+
+
+
+::: aside
+**Source:** Figure 2 in draft paper.
+:::
+
+
+---
+
+### Summary
+
+1. Big increase in hospice spending
+2. Substantial growth of for-profit hospices
+3. Potential exploitation of imprecise admission criteria
+
+
+---
+
+### Research Question
+
+What does growth of FP hospices mean for total health care spending and health outcomes? Do policies intended to curb improper admissions actually work?
+
+
+---
+
+### Basic idea
+
+
+- FP hospice appears more aggressive in admitting patients
+- Not necessarily "bad" given health status of patients and potential cost savings
+- **Policy Implication:** Attempts to curb more aggressive hospice admissions may have unintended consequences
+
+
+---
+
+## What does this paper do? {.section-divider}
+
+
+---
+
+### Empirical strategy
+
+- Focus on ADRD diagnosis without restriction to people that die within certain time period
+- Examine spending and mortality over 5-year period
+- 2SLS using FP distance as instrument
+
+
+:::{.fragment}
+
+$$
+\begin{align*}
+ FP_{icz} &= \alpha + \beta \mathbf{D_{FP,cz}} + \delta X_{icz} + \gamma D_{NP,cz} + \lambda_{z} + \lambda_{c} + \epsilon_{icz} \\
+ Y_{icz} &= \tilde{\alpha} + \tilde{\beta} \widehat{FP}_{icz} + \tilde{\delta} X_{icz} + \tilde{\gamma} D_{NP,cz} + \tilde{\lambda}_{z} + \tilde{\lambda}_{c} + \varepsilon_{icz}
+\end{align*}
+$$
+:::
+
+---
+
+### Empirical strategy
+
+- Identification from variation in spending for different patients within same zip code
+- "Pre-period" patients were in the same zip code but FP hospice was further away
+- Decomposition of MFX between "otherwise NFP" and "new" hospice patients
+
+---
+
+### Findings
+
+:::{.fragment}
+1. Large spending reduction:
+   - $44,000 relative to no hospice, small and insignificant relative to NFP
+:::
+
+:::{.fragment}
+2. Increased mortality:
+   - 30% (4 percentage points) 90 days from diagnosis
+   - 25% (6.8 percentage points) 1 year from diagnosis
+   - 13% (8.6 percentage points) 5 years from diagnosis
+   - Larger effects relative to no hospice, null effects relative to NFP
+:::
+
+---
+
+## Some conceptual questions {.section-divider}
+
+---
+
+- Hospice will almost always reduce costs, particularly over several year window
+- Critical question is where new patients are coming from and how
+
+
+---
+
+### New FP patients come from:
+
+
+::: {.incremental}
+1. Patients otherwise going to NFP hospice
+2. Unmet need due to capacity constraints
+3. Unmet need due to information problems
+4. Patients not otherwise seeking hospice (induced to hospice)
+:::
+
+---
+
+### Who are these new patients?
+
+::: {.incremental}
+- If NFP are capacity constrained, FP hospice can draw from potential hospice pool who wouldn't have had access
+- If patients misled about curative options, FP hospice can solve information problem
+- If not, FP draws from people who would never otherwise have gone to hospice
+- Does mortality increase consist of some people otherwise benefiting from curative treatment?
+:::
+
+---
+
+### Diagnosis for hospice
+
+Not only **admission** that is potentially influenced by presence of FP hospice
+
+
+---
+
+### Diagnosis for hospice
+
+
+> This was especially pronounced following the announcement of a change in hospice coding guidelines in 2013, which prohibited the use of debility as a primary diagnosis. However, we did not observe a decline in the number of patients enrolled in hospice care after the change, which suggests that patients who would have received hospice care with a debility diagnosis were receiving hospice care with a different primary diagnosis. 
+
+::: aside
+Hargraves and Brennan, 2016, Health Affairs
+:::
+
+
+---
+
+### Diagnosis for hospice
+
+- Can the hospice agency affect diagnosis?
+- Seems particularly salient in ADRD, where diagnosis itself is unclear
+
+--- 
+
+### Diagnosis for hospice 
+
+- Can the hospice agency affect diagnosis?
+- Seems particularly salient in ADRD, where diagnosis itself is unclear
+
+> Hospice organizations can assist in determining eligibility for patients suffering from terminal illnesses. 
+
+::: aside
+**Source:** Teoli and Bhardwaj, *Hospice Appropriate Diagnoses*, StatPearls Publishing, 2023
+:::
+
+---
+
+## Some empirical questions {.section-divider}
+
+
+---
+
+### Does change of ownership matter?
 
 ```{r}
 #| fig-align: center
@@ -80,3 +291,62 @@ chow.data %>%
     y="Count of Hospices"
   )
 ```
+
+---
+
+### Distance as an instrument
+
+
+- Firms locating somewhat strategically
+- Presumably partly due to proximity to patients and competitors
+- Are FP hospices just locating in under-served areas, where the only other care option is inpatient care?
+- Concern made worse when conditioning on NFP distance
+
+
+---
+
+### Balance on observables
+
+- Some differences in diagnoses 
+  - kidney disease
+  - diabetes
+  - hyperlipidemia
+  - hypertension
+- Large racial differences (90.3% white versus 83.6%)
+- Urban vs rural?
+
+
+---
+
+## Final thoughts {.section-divider}
+
+
+---
+
+### Suggestions
+
+- Consideration of "new" hospice patients
+   - Mortality effects seem very large
+- Preliminary matched/weighted DD estimates using FP entry as treatment
+- Sensitivity to NFP distance in 2SLS estimates
+
+---
+
+### Takeaways
+
+1. Great question with important policy implications
+2. Interesting welfare question regarding mortality effects
+3. **To policy makers...**
+   - If you want to encourage or discourage something specific, tie incentives directly to that specific thing
+   
+   
+---
+
+## Thank You! {.section-divider}
+
+::: footnote
+Ian McCarthy, Emory University & NBER<br>
+ianmcccarthyecon.com<br>
+ian.mccarthy@emory.edu
+:::
+   
