@@ -191,7 +191,10 @@ $$
 
 ---
 
-- Hospice will almost always reduce costs, particularly over several year window
+### Direction of effects guaranteed?
+
+- By definition, hospice patients forego curative care
+- Sending all elderly ADRD patients into hospice would save money and increase mortality
 - Critical question is where new patients are coming from and how
 
 
@@ -323,11 +326,16 @@ chow.data %>%
 
 ---
 
-### Suggestions
+### In consideration of "new" hospice patients:
 
-- Consideration of "new" hospice patients
-   - Mortality effects seem very large
-   - Predict compliers and summarize expenditures for high-probability patients without FP hospice access?
+- Lower spending almost guaranteed, but mortality effects seem potentially large
+- Measure *ex post* change in spending and mortality if **everyone** of a certain age/diagnosis stopped receiving curative treatment
+- Are FP hospices identifying patients on the "better" end of this distribution?
+
+---
+
+### Distance as IV:
+
 - Preliminary matched/weighted DD estimates using FP entry as treatment
 - Sensitivity to NFP distance in 2SLS estimates
 
