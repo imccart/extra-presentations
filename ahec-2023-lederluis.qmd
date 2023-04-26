@@ -327,6 +327,7 @@ chow.data %>%
 
 - Consideration of "new" hospice patients
    - Mortality effects seem very large
+   - Predict compliers and summarize expenditures for high-probability patients without FP hospice access?
 - Preliminary matched/weighted DD estimates using FP entry as treatment
 - Sensitivity to NFP distance in 2SLS estimates
 
