@@ -193,7 +193,7 @@ $$
 
 ### "Traditional" spending on ADRD patients
 
-![](images/adrd-medicare.webp){fig-align="center", width=75%}
+![](images/adrd-medicare.webp){fig-align="center", width=50%}
 
 ::: aside
 **Source:** Hoffman et al., 2022, Journal of the American Geriatrics Society
@@ -206,7 +206,7 @@ $$
 ### Direction of effects guaranteed?
 
 - By definition, hospice patients forego curative care
-- Sending all elderly ADRD patients into hospice would save money and increase mortality
+- Sending all elderly ADRD patients into hospice would seem to save money and increase mortality
 - Critical question is where new patients are coming from and how
 
 
@@ -340,7 +340,8 @@ chow.data %>%
 
 ### In consideration of "new" hospice patients:
 
-- Lower spending almost guaranteed, but mortality effects seem potentially large
+- Effects among baseline capacity constrained and unconstrained markets
+- Lower spending almost guaranteed (?), but mortality effects seem potentially large
 - Measure *ex post* change in spending and mortality if **everyone** of a certain age/diagnosis stopped receiving curative treatment
 - Are FP hospices identifying patients on the "better" end of this distribution?
 
