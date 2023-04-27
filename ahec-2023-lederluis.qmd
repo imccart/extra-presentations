@@ -193,7 +193,7 @@ $$
 
 ### "Traditional" spending on ADRD patients
 
-![](images/adrd-medicare.webp)
+![](images/adrd-medicare.webp){fig-align="center", width=75%}
 
 ::: aside
 **Source:** Hoffman et al., 2022, Journal of the American Geriatrics Society
