@@ -191,6 +191,18 @@ $$
 
 ---
 
+### "Traditional" spending on ADRD patients
+
+![](images/adrd-medicare.webp)
+
+::: aside
+**Source:** Hoffman et al., 2022, Journal of the American Geriatrics Society
+:::
+
+
+
+---
+
 ### Direction of effects guaranteed?
 
 - By definition, hospice patients forego curative care
