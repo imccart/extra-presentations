@@ -126,15 +126,6 @@ pos.data %>%
 What does growth of FP hospices mean for total health care spending and health outcomes? Do policies intended to curb improper admissions actually work?
 
 
----
-
-### Basic idea
-
-
-- FP hospice appears more aggressive in admitting patients
-- Not necessarily "bad" given health status of patients and potential cost savings
-- **Policy Implication:** Attempts to curb more aggressive hospice admissions may have unintended consequences
-
 
 ---
 
@@ -222,16 +213,6 @@ $$
 4. Patients not otherwise seeking hospice (induced to hospice)
 :::
 
----
-
-### Who are these new patients?
-
-::: {.incremental}
-- If NFP are capacity constrained, FP hospice can draw from potential hospice pool who wouldn't have had access
-- If patients misled about curative options, FP hospice can solve information problem
-- If not, FP draws from people who would never otherwise have gone to hospice
-- Does mortality increase consist of some people otherwise benefiting from curative treatment?
-:::
 
 ---
 
@@ -240,31 +221,11 @@ $$
 Not only **admission** that is potentially influenced by presence of FP hospice
 
 
----
-
-### Diagnosis for hospice
-
-
-> This was especially pronounced following the announcement of a change in hospice coding guidelines in 2013, which prohibited the use of debility as a primary diagnosis. However, we did not observe a decline in the number of patients enrolled in hospice care after the change, which suggests that patients who would have received hospice care with a debility diagnosis were receiving hospice care with a different primary diagnosis. 
-
-::: aside
-Hargraves and Brennan, 2016, Health Affairs
-:::
-
-
----
-
-### Diagnosis for hospice
-
-- Can the hospice agency affect diagnosis?
-- Seems particularly salient in ADRD, where diagnosis itself is unclear
-
 --- 
 
 ### Diagnosis for hospice 
 
-- Can the hospice agency affect diagnosis?
-- Seems particularly salient in ADRD, where diagnosis itself is unclear
+Not only **admission** that is potentially influenced by presence of FP hospice
 
 > Hospice organizations can assist in determining eligibility for patients suffering from terminal illnesses. 
 
