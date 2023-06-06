@@ -1,0 +1,160 @@
+---
+title: "Role of Insurance in Monitoring Physician Fraud and Other Healthcare Delivery Crimes"
+author: "Presenter: Margarita Khvan, USC <br> Discussant: Ian McCarthy, Emory University and NBER"
+institute: "ASHEcon, June 14, 2023"
+format: 
+  revealjs:
+    theme: [simple, quarto-styles.scss]
+    preview-links: auto
+    chalkboard:
+      boardmarker-width: 5
+    slide-number: true
+#    embed-resources: true
+from: markdown+emoji
+execute: 
+  echo: false
+---
+
+```{r}
+#| include: false
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse, ggplot2, lubridate, scales, hrbrthemes, gdata, ggforce, gganimate)
+```
+
+---
+
+## Background {.section-divider}
+
+---
+
+### Waste in U.S. Health Care
+
+Total waste is estimated at over $900 billion per year (nearly 35% of all health care expenditures)
+
+- *Failures of care delivery:* \$102 to \$154 billion
+- *Failures of care coordination:* \$25 to \$45 billion
+- *Overtreatment:* \$158 to \$226 billion
+- *Administrative complexity:* \$107 to \$389 billion
+- *Pricing failures:* \$84 to \$178 billion
+- *Fraud and abuse:* \$82 to \$272 billion
+
+::: aside
+**Source:** Berwick and Hackbarth, *Eliminating Waste in US Health Care*, JAMA, 2012
+:::
+
+---
+
+### Potential for fraud in Medicare and Medicaid
+
+::: {.callout-note appearance="minimal"}
+
+- GAO...designated Medicare and Medicaid as being at "high risk" for fraud, abuse, and improper payments. Both programs were designed to enroll "any willing provider" and to reimburse claims quickly for services provided.
+- Enormous volume: 4.5 Medicare million claims from 1.5 million providers **daily**, 30,000 enrollment applications from providers **monthly**
+- Emphasis on rapid payment
+- Eastern European crime syndicates stealing the identifies of beneficiaries and billing the programs for treatments that didn't take place at clinics that don't exist
+:::
+
+::: aside
+**Source:** Goldman, *Eliminating Fraud and Abuse*, Health Affairs, 2012
+:::
+
+
+
+---
+
+### Research Question
+
+What role do insurers play in combatting fraud?
+
+
+
+---
+
+## What does this paper do? {.section-divider}
+
+
+---
+
+### Empirical strategy
+
+- Identify physicians that are eventually excluded due to fraud
+- Compare to physicians not excluded
+- Focus on inpatient stays in Florida from 2012 to 2017
+- Outcomes: discharges, length of stay, charges
+
+
+---
+
+### Findings
+
+:::{.fragment}
+1. Excluded physicians do more...but only in **Medicare and Medicaid FFS**
+    - at least 150% more discharges, 180% longer patient stays, 200% higher charges
+:::
+
+:::{.fragment}
+2. Excluded physicians do less in Medicare Advantage
+    - around 50% less in all outcomes
+:::
+
+---
+
+## Some thoughts {.section-divider}
+
+
+---
+
+### Selection into insurance types
+
+- A heavily fraudulent provider should focus where fraud is easiest
+- Is there sufficient overlap in non-FFS insurance? 
+
+
+---
+
+### How much of the estimates are mechanical?
+
+- Fraud is identified by outlier behaviors in Medicare and Medicaid FFS claims. By construction, excluded physicians are outliers in Medicare and Medicaid FFS
+- Physicians only have so much capacity. 150% more in FFS should be offset by a reduction somewhere
+
+---
+
+### Is this fraud?
+
+- "Doing more" can mean lots of things
+- Can we separate fraud from overtreatment here?
+
+---
+
+### Policy implications?
+
+- How to quantify the reduction in waste/fraud versus the added administrative complexity from other insurers?
+- What mechanisms are these other insurers using to pull down quantity? Prior approvals? Alternative payment models?
+
+---
+
+### Some suggestions
+
+- Show balance in payer mix among excluded and non-excluded physicians
+- Consider additional analysis on a per-patient basis? May avoid mechanical offsets due to capacity constraints
+- Leverage data post-exclusion to asses role of capacity constraints
+- Reframe in terms of waste? Or bound estimates using other estimates of fraud vs overtreatment?
+- Any opportunity to exploit bundled payments or CJR to identify mechanisms?
+
+---
+
+### Takeaways
+
+- Can insurers successfully combat fraud? Great question with clear policy implications
+- **Answer:** Yes!
+
+---
+
+## Thank You! {.section-divider}
+
+::: footnote
+Ian McCarthy, Emory University & NBER<br>
+ianmcccarthyecon.com<br>
+ian.mccarthy@emory.edu
+:::
+   

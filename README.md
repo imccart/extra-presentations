@@ -20,6 +20,6 @@ This repo just collects a few additional presentations outside of any specific r
 -   [AHEW, October 2022, Vatter 2022](ahew-2022-vatter.html) Slides for discussion of *Quality Disclosure and Regulation: Scoring Design in Medicare Advantage* by Benjamin Vatter
 -   [AHEC, April 2023, Leder-Luis 2023](ahec-2023-lederluis.html) Slides for discussion of *Dying or Lying? For-Profit Hospices and End of Life Care* presented by Jetson Leder-Luis
 -   [ASHEcon, June 2023, Wu 2023](https://extras.talks.ianmccarthyecon.com/ashecon-2023-wu.html) Slides for discussion of *Origin of Physician Practice Variation: Role of Training and Clinical Trials* presented by Bingxiao Wu
--   [ASHEcon, June 2023, Chen 2023](https://extras.talks.ianmccarthyecon.com/ashecon-2023-chen.html) Slides for discussion of *Role of Insurance in Monitoring Physician Fraud and Other Healthcare Delivery Crimes* presented by Alice Chen
+-   [ASHEcon, June 2023, Khvan 2023](https://extras.talks.ianmccarthyecon.com/ashecon-2023-khvan.html) Slides for discussion of *Role of Insurance in Monitoring Physician Fraud and Other Healthcare Delivery Crimes* presented by Margarita Khvan
 
 
