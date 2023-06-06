@@ -1,0 +1,193 @@
+---
+title: "Origin of Physician Practice Variation: Role of Training and Clinical Trials"
+author: "Presenter: Bingxiao Wu, Rutgers University <br> Discussant: Ian McCarthy, Emory University and NBER"
+institute: "ASHEcon, June 12, 2023"
+format: 
+  revealjs:
+    theme: [simple, quarto-styles.scss]
+    preview-links: auto
+    chalkboard:
+      boardmarker-width: 5
+    slide-number: true
+#    embed-resources: true
+from: markdown+emoji
+execute: 
+  echo: false
+---
+
+```{r}
+#| include: false
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse, ggplot2, lubridate, scales, hrbrthemes, gdata, ggforce, gganimate)
+```
+
+---
+
+## Background {.section-divider}
+
+
+---
+
+### Geographic Variation in Health Care Spending
+
+:::: {.columns}
+
+::: {.column width=50%}
+
+  ![](images/dartmouth_map.png)
+:::
+  
+::: {.column width=50%}
+
+  ![](images/dartmouth_dist.png){height=500}
+
+:::
+
+::::
+
+::: aside
+**Source:** Dartmouth Atlas
+:::
+
+
+---
+
+Variation is not **just** in spending across geographic areas...also exists:
+
+- quality of care
+- *within* geographic markets
+
+
+---
+
+### Within-market Variation in Health Care Spending and Quality
+
+:::: {.columns}
+
+::: {.column width=50%}
+
+  ![](images/Payment_IQR_1_1_0.png)
+:::
+  
+::: {.column width=50%}
+
+  ![](images/Mortality_IQR_1_1_0.png)
+
+:::
+
+::::
+
+::: aside
+**Source:** Preliminary analysis of Medicare claims
+:::
+
+
+---
+
+### Research Question
+
+Does a physician's training explain some amount of the observed variation in care?
+
+
+
+---
+
+## What does this paper do? {.section-divider}
+
+
+---
+
+### Empirical strategy
+
+- Transcatheter Aortic Valve Replacement (TAVR)
+- Exploit launch of PARTNER TAVR trials in 22 hospitals in 2007
+- "trained" physicians compared to "matched" physicians with same fellowship location but just before PARTNER trial
+
+
+---
+
+### Empirical strategy
+
+- Compare physicians with and without PARTNER training
+- Compare physicians exposed to a trained physician versus not (spillovers)
+
+---
+
+### Findings
+
+:::{.fragment}
+1. Trained physicians much more likely to use TAVR
+    - 150% more likely to use TAVR when part of PARTNER trial
+:::
+
+:::{.fragment}
+2. Untrained physicians "around" trained physicians also more likely to use TAVR
+    - 12% more TAVR when practicing in the same zip code as a trained physician
+:::
+
+---
+
+## Some thoughts {.section-divider}
+
+---
+
+### Minor interpretation question
+
+- Is "1.5 times more likely" the right conclusion?
+- Or should it be 1.5 times faster?
+- Estimates on volume are much smaller (between 20% and 35%)
+
+---
+
+### Metrics point
+
+- Some growing skepticism with $ln(y + \text{c})$ (Mullahy and Norton, 2023)
+- Consider OLS on untransformed outcome, two-part model, or Poisson
+
+---
+
+### TAVR adoption is pretty complicated
+
+- TAVR first approved only for high-risk patients ineligible for SAVR
+- Later approved for SAVR-eligible high-risk and eventually intermediate risk
+- Hospital infrastructure requirements
+- Hospital and physician volume requirements
+
+
+
+---
+
+### TAVR adoption is pretty complicated
+
+- Requires hospital commitment and likely direct investment
+- Availability depends on physician's prior experience
+- Are results a reflection of physician skill/preference or...
+    - hospital willingness/ability to invest in TAVR program
+    - physician switching costs due to differential volume requirements with prior TAVR experience
+
+
+---
+
+### Suggestions moving forward
+
+- Incorporate volume and infrastructure requirements when constructing matched pairs
+- Want to make sure hospitals are on equal footing
+
+---
+
+### Takeaways
+
+1. How do we explain observed variaton? Great question with clear policy implications
+2. Good identification strategy to test role of clinical training
+3. Complicated setting but seems doable given data 
+   
+---
+
+## Thank You! {.section-divider}
+
+::: footnote
+Ian McCarthy, Emory University & NBER<br>
+ianmcccarthyecon.com<br>
+ian.mccarthy@emory.edu
+:::
+   
