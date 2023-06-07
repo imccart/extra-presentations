@@ -9,7 +9,8 @@ format:
     chalkboard:
       boardmarker-width: 5
     slide-number: true
-    margin: 0.05
+    width: 1600
+    height: 900
 #    embed-resources: true
 from: markdown+emoji
 execute: 
