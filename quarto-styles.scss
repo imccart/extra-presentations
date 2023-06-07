@@ -3,7 +3,7 @@
 /*-- scss:rules --*/
 
 #title-slide {
-  text-align: left;;
+  text-align: left;
 }
 
 #title-slide .title{
@@ -13,10 +13,12 @@
 #title-slide .institute {
   font-style: italic;
   font-size: 80%;
+  text-align: left;
 }
 
 #title-slide .author {
   color: $body-color;
+  text-align: left;
 }
 
 #title-slide p.author::before {
