@@ -1,0 +1,125 @@
+---
+title: "Effect of Critical Access Hospital Designation on Inpatient Prices in Employer-Sponsored Insurance"
+author: "Presenter: Jessica Chang, University of Minnesota <br> Discussant: Ian McCarthy, Emory University and NBER"
+institute: "ASHEcon, June 13, 2023"
+format: 
+  revealjs:
+    theme: [simple, quarto-styles.scss]
+    preview-links: auto
+    chalkboard:
+      boardmarker-width: 5
+    slide-number: true
+#    embed-resources: true
+from: markdown+emoji
+execute: 
+  echo: false
+---
+
+```{r}
+#| include: false
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse, ggplot2, lubridate, scales, hrbrthemes, gdata, ggforce, gganimate)
+```
+
+---
+
+## Background {.section-divider}
+
+---
+
+U.S. regularly ranks very low in terms of access to care, for two general reasons:
+
+1. Affordability
+2. Availability
+
+
+---
+
+> The United States trailed other countries in making health care affordable and ranked poorly on providing timely access to medical care (except specialist care)
+
+::: aside
+**Source:** Osborn et. al., *In New Survey of Eleven Countries, US Adults Still Struggle With Access To And Affordability Of Health Care*, Health Affairs, 2016
+:::
+
+
+---
+
+### Critical Access Hospital
+
+- Essentially form of financial assistance to hospitals in rural and underserved areas
+- Directly addresses **availability**
+- May also affect **affordability**
+
+
+---
+
+### Research Question
+
+What effect does CAH designation have on private insurance prices?
+
+
+
+---
+
+## What does this paper do? {.section-divider}
+
+
+---
+
+### Empirical strategy
+
+- Compare CAH prices (allowed amounts) to other (non-CAH) rural hospitals
+- Focus on inpatient stays among patients with employer-sponsored insurance
+- Data from HCCI, 2012 through 2021
+- 36 CAH "switchers" between 2014 and 2017
+
+
+---
+
+### Findings
+
+:::{.fragment}
+1. CAH have lower inpatient prices on average compared to non-CAH
+:::
+
+:::{.fragment}
+2. CAH designation has essentially no effect on inpatient prices
+:::
+
+---
+
+## Some thoughts {.section-divider}
+
+
+---
+
+### A few open questions
+
+- How does a hospital become newly designated as CAH?
+- How many inpatient observations in the treatment group? How much do CAHs rely on ESI?
+- Can we say much with just 30ish treated hospitals? 
+
+---
+
+### Some suggestions
+
+- Identify reasons for CAH switch and summarize (if possible)
+- Consider synthetic control for individual hospitals with "exogenous" CAH switching status (e.g., due to policy changes rather than hospital decisions)
+
+---
+
+### Takeaways
+
+- Does CAH designation affect prices? Natural question but hard to answer empirically
+- **Answer:** Probably not
+
+---
+
+## Thank You! {.section-divider}
+
+::: footnote
+Ian McCarthy, Emory University & NBER<br>
+ianmcccarthyecon.com<br>
+ian.mccarthy@emory.edu
+:::
+   
