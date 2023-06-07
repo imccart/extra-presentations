@@ -4,6 +4,14 @@
 
 #title-slide {
   text-align: left;
+  
+  .quarto-title-authors {
+    justify-content: left;
+  }
+  
+  .quarto-title-institute {
+    justify-content: left;
+  }
 }
 
 #title-slide .title{
