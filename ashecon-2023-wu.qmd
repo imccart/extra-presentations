@@ -179,7 +179,7 @@ Does a physician's training explain some amount of the observed variation in car
 
 ### Takeaways
 
-1. How do we explain observed variaton? Great question with clear policy implications
+1. How do we explain observed variation? Great question with clear policy implications
 2. Good identification strategy to test role of clinical training
 3. Complicated setting but seems doable given data 
    
