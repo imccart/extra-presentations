@@ -107,7 +107,7 @@ What effect does CAH designation have on private insurance prices?
 :::{.incremental}
 0. Don't :grin:
 1. Two-price model. CAH :arrow_right: higher prices
-2. Bargaining model. CAH :arrow_right: no change
+2. Bargaining model. CAH :arrow_right: no change (maybe lower)
 3. Utility maximizing hospital. CAH :arrow_right: lower prices
     - Utility from something other than profits (Dranove, 1988)
     - Diminishing marginal utility of profit (Darden et al., 2022)
@@ -127,6 +127,7 @@ What effect does CAH designation have on private insurance prices?
 
 - Identify reasons for CAH switch and summarize (if possible)
 - Consider synthetic control for individual hospitals with "exogenous" CAH switching status (e.g., due to policy changes rather than hospital decisions)
+- What about spillovers to other "nearby" hospitals? Pure competition and bargaining framework
 
 ---
 
