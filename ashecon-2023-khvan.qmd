@@ -51,7 +51,7 @@ Total waste is estimated at over $900 billion per year (nearly 35% of all health
 ::: {.callout-note appearance="minimal"}
 
 - GAO...designated Medicare and Medicaid as being at "high risk" for fraud, abuse, and improper payments. Both programs were designed to enroll "any willing provider" and to reimburse claims quickly for services provided.
-- Enormous volume: 4.5 Medicare million claims from 1.5 million providers **daily**, 30,000 enrollment applications from providers **monthly**
+- Enormous volume: 4.5 million Medicare claims from 1.5 million providers **daily**, 30,000 enrollment applications from providers **monthly**
 - Emphasis on rapid payment
 - Eastern European crime syndicates stealing the identifies of beneficiaries and billing the programs for treatments that didn't take place at clinics that don't exist
 :::
