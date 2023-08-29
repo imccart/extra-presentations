@@ -1,0 +1,50 @@
+---
+title: "If You (Re)Build It, Will They Come? Evidence from California"
+author: "Presenter: Zach Levin, Federal Trade Commission\n Discussant: Ian McCarthy, Emory University and NBER"
+institute: "MHEC, September 7, 2023"
+format: 
+  revealjs:
+    theme: [simple, quarto-styles.scss]
+    preview-links: auto
+    chalkboard:
+      boardmarker-width: 5
+    slide-number: true
+#    embed-resources: true
+from: markdown+emoji
+execute: 
+  echo: false
+---
+
+```{r}
+#| include: false
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse, ggplot2, lubridate, scales, hrbrthemes, gdata, ggforce, gganimate)
+```
+
+---
+
+## Background {.section-divider}
+
+
+---
+
+### What is hospice?
+
+::: {.callout-note appearance="minimal"}
+
+## National Cancer Institute Definition
+"A program that gives special care to people who are near the end of life and have **stopped treatment to cure or control their disease**...The main goal of hospice care is to **control pain and other symptoms of illness** so patients can be as comfortable and alert as possible. It is **usually given at home**, but may also be given in a hospice center, hospital, or nursing home." *emphasis added*
+
+:::
+
+
+---
+
+## Thank You! {.section-divider}
+
+::: footnote
+Ian McCarthy, Emory University & NBER<br>
+ianmcccarthyecon.com<br>
+ian.mccarthy@emory.edu
+:::
+   
