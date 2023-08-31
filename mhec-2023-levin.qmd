@@ -28,15 +28,166 @@ pacman::p_load(tidyverse, ggplot2, lubridate, scales, hrbrthemes, gdata, ggforce
 
 ---
 
-### What is hospice?
+### Two Relevant Literatures
 
-::: {.callout-note appearance="minimal"}
+1. Entry and competition in hospital markets
+2. Patient preferences for clinical quality versus amenities
 
-## National Cancer Institute Definition
-"A program that gives special care to people who are near the end of life and have **stopped treatment to cure or control their disease**...The main goal of hospice care is to **control pain and other symptoms of illness** so patients can be as comfortable and alert as possible. It is **usually given at home**, but may also be given in a hospice center, hospital, or nursing home." *emphasis added*
+---
 
+### Timeline of Entry Restrictions
+
+- **Mid 1960s:** Increasing concern about hospital costs and excess capacity, duplicative services and facilities
+- **1964:** New York State enacts the first certificate of need (CON) program
+- **1974:** National Health Planning and Resources Development Act requires all states to have CON programs
+- **1980:** CON laws in place for all states except Louisiana
+
+::: {.fragment}
+CON laws enacted during a time in which hospitals were paid on a cost-plus basis, with little to no incentive to control costs
 :::
 
+---
+
+### Walking Back CON Laws
+
+- **1986:** Congress repeals the National Health Planning and Resources Development Act
+- **1990s:** Many states repeal or weaken CON laws
+- **Today:** 35 states and the District of Columbia still have some form of CON laws, 14 states have CON laws that apply specifically to hospitals
+
+::: {.fragment}
+As we continue to grapple with increasing hospital prices, CON laws are often cited as part of the problem as they are specifically designed to restrict competition. Repeal of CON laws and similar supply restrictions will tend to encourage entry. What would be the effect of such a policy change?
+:::
+
+
+---
+
+### Patient Preferences
+
+- Strong evidence that patients value non-clinical quality
+- Construction implies shiny new buildings, private rooms, etc.
+
+---
+
+### Research Question
+
+What happens after construction of a new hospital?
+
+- Utilization at focal hospital versus other hospitals in the market
+- Quality changes, clinical and non-clinical
+
+
+---
+
+## What does this paper do? {.section-divider}
+
+---
+
+### Basic Idea
+
+- **2006:** California enacts SB 1953, requiring all hospitals to meet seismic safety standards by 2030
+  - 90% of hospitals did not meet these standards in 2006
+- **2009-2015:** 41 non-ED expansions or rebuilds
+
+---
+
+### Empirical Strategy
+
+Stacked difference-in-differences
+  - Treatment: hospital in California that expands or rebuilds in 2009-2015
+  - Control: hospitals in other markets (20+ miles away) that do not expand or rebuild
+  - Time: pre- and post-construction
+
+---
+
+### Findings
+
+- Construction projects yield 10%+ increase in admissions
+- Patients more likely to recommend hospitals after construction
+- No evidence of changes in clinical quality
+
+---
+
+## Some Conceptual Questions {.section-divider}
+
+---
+
+### Implications for CON Laws?
+
+- In what ways are CON laws binding?
+  - Own-hospital expansion? (seems unlikely)
+  - Entry by new hospitals? (seems more likely)
+
+---
+
+### Implications for Amenities?
+
+- Large capital investments imply investment in amenities
+- Can this be measured somehow?
+- Is "room always quite" or "always respond quickly" an amenity?
+
+---
+
+## Some Empirical Questions {.section-divider}
+
+---
+
+### Why did the hospitals expand or rebuild?
+
+> ...though I am unable to differentiate whether this growth is a response to unmet needs.
+
+**Things to consider:**
+
+::: {.fragment}
+  - Pre-construction occupancy
+  - Admission or procedure codes before/after construction
+:::
+
+
+---
+
+### Treated vs. Control
+
+- Treated hospitals appear very different than control hospitals
+- Bigger, higher occupancy, less Medicaid, less for-profit, more teaching hospitals
+- **Things to consider:**
+
+::: {.fragment}
+  - Reweighting on pre-expansion size, occupancy, etc.
+  - Not-yet-treated as controls in stacked setup
+:::
+
+---
+
+### Pre-trends/confounding
+
+![](images/ami-admits.png){width=60% fig-align="center"}
+
+---
+
+### Pre-trends/confounding
+
+![](images/total-admits.png){width=60% fig-align="center"}
+
+---
+
+### Potential Solution
+
+![](images/shapiro-wiggly.png){fig-align="center"}
+
+::: aside
+**Source:** Freyaldenhoven, Hansen, Perez, and Shapiro, 2022, [NBER Working Paper 29170](https://www-nber-org.proxy.library.emory.edu/papers/w29170)
+:::
+---
+
+## Final Thoughts {.section-divider}
+
+---
+
+### My Takeaways
+
+- Great data, well suited to study effects of hospital "growth"
+- Decomposing additional admissions into expansion versus unmet need is important here
+- Opportunity to identify pre-construction capacity constrained vs. unconstrained hospitals
 
 ---
 
