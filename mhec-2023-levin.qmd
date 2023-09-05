@@ -25,17 +25,26 @@ pacman::p_load(tidyverse, ggplot2, lubridate, scales, hrbrthemes, gdata, ggforce
 
 ## Background {.section-divider}
 
+---
+
+### Research Question
+
+What happens after construction of a new hospital?
+
+- Utilization at focal hospital versus other hospitals in the market
+- Quality changes, clinical and non-clinical
 
 ---
 
-### Two Relevant Literatures
+### Relevant Literatures
 
 1. Entry and competition in hospital markets
 2. Patient preferences for clinical quality versus amenities
+3. Non-profit hospitals and incentives for overuse?
 
 ---
 
-### Timeline of Entry Restrictions
+### 1. Entry and Competition
 
 - **Mid 1960s:** Increasing concern about hospital costs and excess capacity, duplicative services and facilities
 - **1964:** New York State enacts the first certificate of need (CON) program
@@ -48,7 +57,7 @@ CON laws enacted during a time in which hospitals were paid on a cost-plus basis
 
 ---
 
-### Walking Back CON Laws
+### 1. Entry and Competition
 
 - **1986:** Congress repeals the National Health Planning and Resources Development Act
 - **1990s:** Many states repeal or weaken CON laws
@@ -61,20 +70,19 @@ As we continue to grapple with increasing hospital prices, CON laws are often ci
 
 ---
 
-### Patient Preferences
+### 2. Patient Preferences
 
 - Strong evidence that patients value non-clinical quality
 - Construction implies shiny new buildings, private rooms, etc.
 
 ---
 
-### Research Question
+### 3. Non-profit Hospitals
 
-What happens after construction of a new hospital?
-
-- Utilization at focal hospital versus other hospitals in the market
-- Quality changes, clinical and non-clinical
-
+- Possible to link construction with NFP status?
+- Reinvesting profits back into system (as necessary for NFP status) may over-incentivize construction
+- Policy implications re NFP status if such construction is "wasteful"
+- Potential call for more oversight of tax benefits
 
 ---
 
@@ -93,6 +101,7 @@ What happens after construction of a new hospital?
 ### Empirical Strategy
 
 Stacked difference-in-differences
+
   - Treatment: hospital in California that expands or rebuilds in 2009-2015
   - Control: hospitals in other markets (20+ miles away) that do not expand or rebuild
   - Time: pre- and post-construction
@@ -122,7 +131,7 @@ Stacked difference-in-differences
 ### Implications for Amenities?
 
 - Large capital investments imply investment in amenities
-- Can this be measured somehow?
+- Can this be measured directly?
 - Is "room always quite" or "always respond quickly" an amenity?
 
 ---
@@ -135,11 +144,12 @@ Stacked difference-in-differences
 
 > ...though I am unable to differentiate whether this growth is a response to unmet needs.
 
-**Things to consider:**
 
 ::: {.fragment}
-  - Pre-construction occupancy
-  - Admission or procedure codes before/after construction
+**Things to consider:**
+  
+  - Pre-construction occupancy to identify capacity constrained vs. unconstrained hospitals (by admission category)
+  - Admission or procedure codes before/after construction to identify services that expanded
 :::
 
 
@@ -149,9 +159,10 @@ Stacked difference-in-differences
 
 - Treated hospitals appear very different than control hospitals
 - Bigger, higher occupancy, less Medicaid, less for-profit, more teaching hospitals
-- **Things to consider:**
 
 ::: {.fragment}
+**Things to consider:**
+
   - Reweighting on pre-expansion size, occupancy, etc.
   - Not-yet-treated as controls in stacked setup
 :::
@@ -166,13 +177,13 @@ Stacked difference-in-differences
 
 ### Pre-trends/confounding
 
-![](images/total-admits.png){width=60% fig-align="center"}
+![](images/total-admits.png){width=50% fig-align="center"}
 
 ---
 
 ### Potential Solution
 
-![](images/shapiro-wiggly.png){fig-align="center"}
+![](images/shapiro-wiggly.png){width=80% fig-align="center"}
 
 ::: aside
 **Source:** Freyaldenhoven, Hansen, Perez, and Shapiro, 2022, [NBER Working Paper 29170](https://www-nber-org.proxy.library.emory.edu/papers/w29170)
@@ -185,9 +196,9 @@ Stacked difference-in-differences
 
 ### My Takeaways
 
-- Great data, well suited to study effects of hospital "growth"
+- Great data, well suited to study effects of hospital construction
 - Decomposing additional admissions into expansion versus unmet need is important here
-- Opportunity to identify pre-construction capacity constrained vs. unconstrained hospitals
+- Consider reframing on NFP status and policies rather than CON laws or amenities
 
 ---
 
