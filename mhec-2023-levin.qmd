@@ -153,3 +153,61 @@ Stacked difference-in-differences
 :::
 
 
+---
+
+### Treated vs. Control
+
+- Treated hospitals appear very different than control hospitals
+- Bigger, higher occupancy, less Medicaid, less for-profit, more teaching hospitals
+
+::: {.fragment}
+**Things to consider:**
+
+  - Reweighting on pre-expansion size, occupancy, etc.
+  - Not-yet-treated as controls in stacked setup
+:::
+
+---
+
+### Pre-trends/confounding
+
+![](images/ami-admits.png){width=60% fig-align="center"}
+
+---
+
+### Pre-trends/confounding
+
+![](images/total-admits.png){width=50% fig-align="center"}
+
+---
+
+### Potential Solution
+
+![](images/shapiro-wiggly.png){width=80% fig-align="center"}
+
+::: aside
+**Source:** Freyaldenhoven, Hansen, Perez, and Shapiro, 2022, [NBER Working Paper 29170](https://www-nber-org.proxy.library.emory.edu/papers/w29170)
+:::
+
+---
+
+## Final Thoughts {.section-divider}
+
+---
+
+### My Takeaways
+
+- Great data, well suited to study effects of hospital construction
+- Decomposing additional admissions into expansion versus unmet need is important here
+- Consider reframing on NFP status and policies rather than CON laws or amenities
+
+---
+
+## Thank You! {.section-divider}
+
+::: footnote
+Ian McCarthy, Emory University & NBER<br>
+ianmcccarthyecon.com<br>
+ian.mccarthy@emory.edu
+:::
+   
