@@ -52,7 +52,7 @@ What happens after construction of a new hospital?
 - **1980:** CON laws in place for all states except Louisiana
 
 ::: {.fragment}
-CON laws enacted during a time in which hospitals were paid on a cost-plus basis, with little to no incentive to control costs
+Enacted during cost-plus reimbursement, where hospitals had little incentive to control costs
 :::
 
 ---
@@ -64,7 +64,7 @@ CON laws enacted during a time in which hospitals were paid on a cost-plus basis
 - **Today:** 35 states and the District of Columbia still have some form of CON laws, 14 states have CON laws that apply specifically to hospitals
 
 ::: {.fragment}
-As we continue to grapple with increasing hospital prices, CON laws are often cited as part of the problem as they are specifically designed to restrict competition. Repeal of CON laws and similar supply restrictions will tend to encourage entry. What would be the effect of such a policy change?
+As a binding barrier to entry, CON often cited as part of the hospital pricing problem
 :::
 
 
@@ -83,4 +83,73 @@ As we continue to grapple with increasing hospital prices, CON laws are often ci
 - Reinvesting profits back into system (as necessary for NFP status) may over-incentivize construction
 - Policy implications re NFP status if such construction is "wasteful"
 - Potential call for more oversight of tax benefits
+
+---
+
+## What does this paper do? {.section-divider}
+
+---
+
+### Basic Idea
+
+- **2006:** California enacts SB 1953, requiring all hospitals to meet seismic safety standards by 2030
+  - 90% of hospitals did not meet these standards in 2006
+- **2009-2015:** 41 non-ED expansions or rebuilds
+
+---
+
+### Empirical Strategy
+
+Stacked difference-in-differences
+
+  - Treatment: hospital in California that expands or rebuilds in 2009-2015
+  - Control: hospitals in other markets (20+ miles away) that do not expand or rebuild
+  - Time: pre- and post-construction
+
+---
+
+### Findings
+
+- Construction projects yield 10%+ increase in admissions
+- Patients more likely to recommend hospitals after construction
+- No evidence of changes in clinical quality
+
+---
+
+## Some Conceptual Questions {.section-divider}
+
+---
+
+### Implications for CON Laws?
+
+- In what ways are CON laws binding?
+  - Own-hospital expansion? (seems unlikely)
+  - Entry by new hospitals? (seems more likely)
+
+---
+
+### Implications for Amenities?
+
+- Large capital investments imply investment in amenities
+- Can this be measured directly?
+- Is "room always quite" or "always respond quickly" an amenity?
+
+---
+
+## Some Empirical Questions {.section-divider}
+
+---
+
+### Why did the hospitals expand or rebuild?
+
+> ...though I am unable to differentiate whether this growth is a response to unmet needs.
+
+
+::: {.fragment}
+**Things to consider:**
+  
+  - Pre-construction occupancy to identify capacity constrained vs. unconstrained hospitals (by admission category)
+  - Admission or procedure codes before/after construction to identify services that expanded
+:::
+
 
